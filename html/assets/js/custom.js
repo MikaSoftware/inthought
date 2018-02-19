@@ -6,7 +6,7 @@ $(document).ready(function () {
 	
 	$('#sidebarCollapse').on('click', function () {
 	    // open or close navbar
-	    $('#sidebar,#main,#sidebarCollapse,#return-to-top').toggleClass('active');
+	    $('#sidebar,#main,#sidebarCollapse,#return-to-top,body').toggleClass('active');
 	        
 	});
 	    

@@ -21,6 +21,17 @@ body {
   padding-bottom: 40px;
   background-color: #eee;
 }
+
+@media only screen and (max-width: 767px) {
+body.active{
+  overflow: hidden;
+}
+}
+
+.link-ndecor {
+  text-decoration: none !important;
+  outline: 0;  
+}
 .form-signin {
   width: 100%;
   padding: 15px;
@@ -233,4 +244,26 @@ a.plain-link{
 .error-actions .btn { margin-right:10px; }
 .form-gap {
     padding-top: 70px;
+}
+
+.circle-title {
+   border: 0;
+   color: #ffffff;
+   line-height: 4.75;
+}
+.circle-200 {
+   height: 200px;
+   width: 200px;
+}
+.bg-pink {
+   background-color: #f4424e;
+}
+.bg-dgreen {
+   background-color: #008000;
+}
+.bg-dblue {
+   background-color: #0275D8;
+}
+.bg-orange {
+   background-color: #F26523;
 }
