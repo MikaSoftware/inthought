@@ -8,7 +8,7 @@
 	<meta name="Over 55 (London) inc." content="">
 	<link rel="icon" href="favicon.ico">
 	
-	<link href="assets/css/signin.css" rel="stylesheet">
+	<link href="assets/css/base.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -25,24 +25,25 @@
 	    </div>
 	    <div class="row">
 	    	<div class="col-sm-6 mx-auto">
-		      <form class="form-signin">
-		        <h2 class="form-signin-heading text-center mb-3">Sign In</h2>
-		        <div class="form-group mb-0">
+	    	<h2 class="text-center mb-3">Sign In</h2>
+		      <form id="sign-in" class="form-signin needs-validation" method="post" action="" novalidate>
+		        
 	                      <div class="input-group input-group-lg">
 	                         <div class="input-group-prepend">
 	                         	<span class="input-group-text input-group-addon-e"><i class="fa fa-envelope color-blue"></i></span>
 	                         </div>
-	                         <input id="email" name="email" placeholder="Email Address" class="form-control form-control-lg" type="email">
+	                         <input id="email" name="email" placeholder="Email Address" class="form-control form-control-lg" type="email" required>
 	                      </div>
-                        </div>
-                        <div class="form-group mb-2">
+                       
 	                      <div class="input-group input-group-lg">
 	                         <div class="input-group-prepend">
 	                         	<span class="input-group-text input-group-addon-p"><i class="fa fa-key color-blue"></i></span>
 	                         </div>
-	                         <input id="password" name="password" placeholder="Password" class="form-control form-control-lg" type="password">
+	                         <input id="password" name="password" placeholder="Password" class="form-control form-control-lg" type="password" minlength="5" required>
+	                         <div id="password-error" class="invalid-feedback"></div>
 	                      </div>
-                        </div>
+	                      <div id="email-error" class="invalid-feedback"></div>
+                   
                         <div class="custom-control custom-checkbox mb-3 mt-3">
   				<input type="checkbox" class="custom-control-input" id="customCheck1">
   				<label class="custom-control-label" for="customCheck1">Remember me</label>
@@ -55,5 +56,44 @@
 		</div>
 	    </div>
 </div> <!-- /container -->
+<script>
+	(function() {
+	  'use strict';
+	  	window.addEventListener('load', function() {
+	  		    // Fetch all the login fields we want to apply custom Bootstrap validation styles to
+			    
+			    var form_sign_in = document.getElementById('sign-in');
+			    
+			    var email = document.getElementById('email');
+			    var e_error = document.getElementById('email-error');
+			    
+			    var password = document.getElementById('password');
+			    var p_error = document.getElementById('password-error'); 
+			    // Loop over them and prevent submission
+			    $(function(){
+			     	// validation for basic search field
+			        $('#sign-in').on('submit',function(e){
+			        	if(email.validity.valueMissing || password.validity.valueMissing) {
+			           		e_error.innerHTML = "Email or Password field is blank.";
+			           		e_error.style.display = "block";
+			           		form_sign_in.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	else if(!email.validity.valid) {
+			           		e_error.innerHTML = "Invalid Email Address.";
+			           		e_error.style.display = "block";
+			           		form_sign_in.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(password.validity.tooShort) {
+			           		p_error.innerHTML = "Invalid Password, must contain atleast 5 characters.";
+			           		form_sign_in.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			        }); 
+			    });
+		}, false);
+	})();    
+	</script>
 </body>
 </html>

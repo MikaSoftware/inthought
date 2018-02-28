@@ -7,7 +7,9 @@ body {
   padding-top: 3.5rem;
   font-size: 1.25rem !important;
 }
-
+html [type=button] {
+    -webkit-appearance: none !important;
+}
 /*
  * Typography
  */
@@ -47,6 +49,7 @@ body.active{
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  border-top-right-radius: 0.3rem !important;
 }
 .form-signin .input-group-addon-e{
   border-bottom-left-radius: 0 !important;
@@ -68,6 +71,7 @@ body.active{
 .form-signin input[type="password"] {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-bottom-right-radius: 0.3rem !important;
 }
 .col-centered{margin: auto;}
 .form-check-input {
@@ -266,4 +270,11 @@ a.plain-link{
 }
 .bg-orange {
    background-color: #F26523;
+}
+.btn-fxw {
+   min-width: 190px;
+}
+.ft-indent {
+   text-indent: -13px;
+   margin-left: 13px;
 }

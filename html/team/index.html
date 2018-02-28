@@ -23,7 +23,7 @@
     <div class="container-fluid">
       <div class="d-flex align-items-stretch">
         <nav id="sidebar">
-		<p class="text-center text-light mt-3 mb-2">Hi, Rodolfo</p>
+	<p class="text-center text-light mt-3 mb-2">Hi, Rodolfo</p>
           <hr class="nav-divider">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -45,13 +45,13 @@
               <a class="nav-link" href="http://inthought.pw/members/"><i class="fas fa-user"></i> Members</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="http://inthought.pw/team/"><i class="fa fa-users"></i> Team</a>
+              <a class="nav-link active" href="http://inthought.pw/team/"><i class="fa fa-users"></i> Team</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/partners/"><i class="fa fa-handshake"></i> Partners</a>
             </li>
-			<li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Resources</a>
+	    <li class="nav-item">
+              <a class="nav-link" href="http://inthought.pw/resources/"><i class="fas fa-file-alt"></i> Resources</a>
             </li>
           </ul>
 		  <hr class="nav-divider">
@@ -72,169 +72,58 @@
         </nav>
         
         <main id="main" role="main">
-          <h1>Associate Members</h1>
+          <h1>Team Members</h1>
 
           <section class="row text-center placeholders">
             <div class="col-sm-3 placeholder">
-	      <div class="rounded-circle mx-auto mt-4 mb-4" style="height: 200px;width: 200px;background-color: #f4424e">
-	      	<h1 class="r-circle"><i class="fas fa-plus fa-3x"></i></h1>
+	      <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-pink">
+	        <a href="team_add.html" class="d-block link-ndecor" title="Add Member">
+	      		<h1 class="r-circle"><i class="fas fa-plus fa-3x"></i></h1>
+	      	</a>
               </div>
               <h4>Add</h4>
-              <div class="text-muted">Add New Member</div>
+              <div class="text-muted">Add Member</div>
             </div>
             <div class="col-sm-3 placeholder">
-              <div class="rounded-circle mx-auto mt-4 mb-4" style="height: 200px;width: 200px;background-color: #008000">
-	      	<h1 class="r-circle"><i class="fas fa-search fa-3x"></i></h1>
+              <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-dgreen">
+                <a href="team_search.html" class="d-block link-ndecor" title="Search Members">
+	      		<h1 class="r-circle"><i class="fas fa-search fa-3x"></i></h1>
+	      	</a>
               </div>
               <h4>Search</h4>
-              <span class="text-muted">Search for a Member</span>
+              <span class="text-muted">Search Members</span>
             </div>
             <div class="col-sm-3 placeholder">
-              <div class="rounded-circle mx-auto mt-4 mb-4" style="height: 200px;width: 200px;background-color: #0275D8">
-	      	<h1 class="r-circle"><i class="fas fa-pencil-alt fa-3x"></i></h1>
+              <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-dblue">
+                <a href="team_edit.html" class="d-block link-ndecor" title="Edit Members">
+	      		<h1 class="r-circle"><i class="fas fa-pencil-alt fa-3x"></i></h1>
+	      	</a>
               </div>
               <h4>Edit</h4>
-              <span class="text-muted">Edit Member Profile</span>
+              <span class="text-muted">Edit Members</span>
             </div>
             <div class="col-sm-3 placeholder">
-              <div class="rounded-circle mx-auto mt-4 mb-4" style="height: 200px;width: 200px;background-color: #F26523">
-	      	<h1 class="r-circle"><i class="fas fa-list-alt fa-3x"></i></h1>
+              <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-orange">
+                <a href="team_list.html" class="d-block link-ndecor" title="View Members">
+	      		<h1 class="r-circle"><i class="fas fa-list-alt fa-3x"></i></h1>
+	      	</a>
 	      </div>
-              <h4>Active Members</h4>
-              <span class="text-muted">View all active members</span>
+              <h4>View</h4>
+              <span class="text-muted">View Members</span>
             </div>
           </section>
 
-          <h2>Associate Member List</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Phone</th>
-                  <th>E-Mail</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Susan</td>
-                  <td>Fairley</td>
-                  <td>(519)438-1111</td>
-                  <td>susan@over55london.ca</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>Rodolfo</td>
-                  <td>Martinez</td>
-                  <td>(519)521-3135</td>
-                  <td>rodolfo@over55london.ca</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
-                </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-		  <a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
-
+	<div class="jumbotron">
+	  <h1 class="display-4">Announcements</h1>
+	  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+	  <hr class="my-4">
+	  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+	  <p class="lead">
+	    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+	  </p>
+	</div>  
+	
+	<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
         </main>
       </div>
     </div>
