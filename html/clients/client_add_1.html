@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Over55 Add Residential Client</title>
+  	<title>Over55 Add Client</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
@@ -85,86 +85,42 @@
 	</div>
 	<h1>Add Client</h1>
 	
-	<div class="col-sm-5 mx-auto mt-2">
-	<!-- Residential form -->
-	    <div class="col-sm-12 fade show active" id="residential-form" aria-labelledby="residential">
-	    <h3 class="pt-4 pb-2 text-center">Residential</h3>
-	    	<form id="residential-form" method="post" class="needs-validation" action="" novalidate>
-	    	<p class="border-bottom mb-3 pb-1 text-secondary">Personal Details</p>
-		  <div class="form-row">
-		    <div class="form-group col-md-12 mb-4">
-		      <label for="firstname">First name *</label>
-		      <input type="text" class="form-control form-control-lg border border-primary" id="firstname" name="firstname" placeholder="First name" minlength="3" required>
-		      <div id="firstname-error" class="invalid-feedback"></div>
+	<div class="col-sm-12 mx-auto mt-3 pt-3 mb-3 text-center">
+		<h5>We found a match for this client:</h5>
+	</div>
+	<div class="col-sm-12 mx-auto mt-4">
+	   	<div class="card bg-light mx-auto" style="width: 18rem;">
+		  <div class="card-body">
+		    <h5 class="card-title"><a href="#"><strong>Rodolfo Martinez</strong></a></h5>
+		    	<p class="card-text">1848 Mickleborough Dr<br>
+			London, ON<br>
+			(519)521-3135
+			</p>
+		  </div>
+		</div>      	
+	</div>
+	<div class="col-sm-12 mx-auto mt-3 mb-3 text-center">
+		<h5>Do you wish to continue adding a NEW client?</h5>
+		<button type="button" class="btn btn-lg btn-dark m-3">
+		  No - use this client
+		</button>
+		<!-- Button trigger YES modal -->
+		<button type="button" class="btn btn-lg btn-success m-3" data-toggle="modal" data-target="#yesModal">
+		  Yes - add a new client
+		</button>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="yesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <p class="m-3 p-2">It appears that you are going to create a duplicate record for an existing client. Are you sure that you want to continue?</p>
+		        <button type="button" class="btn btn-lg btn-secondary float-left m-2" data-dismiss="modal">No</button>
+		        <button type="button" class="btn btn-lg btn-primary float-right m-2">Yes</button>
+		      </div>
 		    </div>
-		    <div class="form-group col-md-12 mb-4">
-		      <label for="lastname">Last name *</label>
-		      <input type="text" class="form-control form-control-lg border border-primary" id="lastname" name="lastname" placeholder="Last name" minlength="3" required>
-		      <div id="lastname-error" class="invalid-feedback"></div>
-		    </div>
-		    <div class="form-group col-md-7 mb-4">
-		      <label for="phonenumber">Phone *</label>
-		      <input type="text" class="form-control form-control-lg border border-primary" id="phonenumber" name="phonenumber" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14" required>
-		      <div id="phonenumber-error" class="invalid-feedback"></div>
-		    </div>
-		    <div class="form-group col-md-7 mb-4">
-		      <label for="mobilenumber">Mobile (optional)</label>
-		      <input type="text" class="form-control form-control-lg border border-success" id="mobilenumber" name="mobilenumber" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14">
-		      <div id="mobilenumber-error" class="invalid-feedback"></div>
-		    </div>
-		    <div class="form-group col-md-12 mb-4">
-		      <label for="email">E-Mail (optional)</label>
-		      <input type="email" class="form-control form-control-lg border border-success" id="email" name="email" placeholder="Email Address">
-		      <div id="email-error" class="invalid-feedback"></div>
-		    </div>
 		  </div>
-		  <div class="form-group mt-2 mb-4">
-			  <p class="mb-1">Ok to E-Mail?</p>
-			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="ok_to_email" name="ok_to_email" value="yes" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="ok_to_email">Yes</label>
-			  </div>
-			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="ok_to_email2" name="ok_to_email" value="no" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="ok_to_email2">No</label>
-			  </div>
-		  </div>
-		  <div class="form-group mt-2 mb-4">
-			  <p class="mb-1">Ok to Text?</p>
-			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="ok_to_text" name="ok_to_text" value="yes" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="ok_to_text">Yes</label>
-			  </div>
-			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="ok_to_text2" name="ok_to_text" value="no" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="ok_to_text2">No</label>
-			  </div>
-		  </div>
-		  <div class="form-group p-0 col-md-7 mb-4">
-		      	<label for="dob">Date of Birth *</label>
-		      	<div class="input-group input-group-lg">
-			      <input type="text" class="form-control form-control-lg border border-success" id="dob" name="dob" placeholder="mm/dd/yyyy" required>
-			      <div class="input-group-append">
-		              	<span class="input-group-text dob-icon bg-success border-success"><i class="far fa-calendar-alt"></i></span>
-		              </div>
-			      <div id="dob-error" class="invalid-feedback"></div>
-		      	</div>
-		  </div>
-		  <div class="form-group col-md-7 mb-4 p-0">
-		      <label for="gender">Gender *</label>
-		      <select class="custom-select form-control-lg border-success" id="gender" name="gender" required>
-		        <option value="" selected>Gender...</option>
-		        <option value="male">Male</option>
-		        <option value="female">Female</option>
-		      </select>
-		      <div id="gender-error" class="invalid-feedback"></div>
-		  </div>
-		  <span class="text-secondary font-italic">* Indicates required.</span>
-		  <div class="form-group col-md-12 mb-3 mx-auto text-center">
-			<button class="btn btn-success btn-lg btn-fxw mt-4" type="submit"><i class="fas fa-plus"></i> Add Client</button>
-		  </div>
-		</form>
-	    </div>
+		</div>
 	</div>
 
 	<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
@@ -196,6 +152,7 @@
 	  		    // Fetch all the forms fields we want to apply custom Bootstrap validation styles to
 			    
 			    var form_residential = document.getElementById('residential-form');
+			    var form_commercial = document.getElementById('commercial-form');
 			    
 			    var firstname = document.getElementById('firstname');
 			    var f_error = document.getElementById('firstname-error');
@@ -219,6 +176,33 @@
 			    
 			    var gender = document.getElementById('gender');
 			    var gender_error = document.getElementById('gender-error');
+			    
+			    var companyname = document.getElementById('companyname');
+			    var companyname_error = document.getElementById('companyname-error');
+			    
+			    var companytype = document.getElementById('companytype');
+			    var companytype_error = document.getElementById('companytype-error');
+			    
+			    var contact_firstname = document.getElementById('contact-firstname');
+			    var cf_error = document.getElementById('c_firstname-error');
+			    
+			    var contact_lastname = document.getElementById('contact-lastname');
+			    var cl_error = document.getElementById('c_lastname-error');
+			    
+			    var c_phonenumber = document.getElementById('c_phonenumber1');
+			    var c_phonenumber_error = document.getElementById('phonenumber1-error');
+			    var c_phonenumber_pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			    var phonetype = document.getElementById('phonetype');
+			    var phonetype_error = document.getElementById('phonetype1-error');
+			    
+			    var c_phonenumber2 = document.getElementById('c_phonenumber2');
+			    var c_phonenumber2_error = document.getElementById('phonenumber2-error');
+			    var c_phonenumber2_pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			    var phonetype2 = document.getElementById('phonetype2');
+			    var phonetype2_error = document.getElementById('phonetype2-error');
+			    
+			    var c_email = document.getElementById('c_email');
+			    var c_email_error = document.getElementById('c_email-error');
 			    
 			    // Loop over them and prevent submission
 			    $(function(){
@@ -316,7 +300,118 @@
 				           		mobile_error.style.display = "none";
 				           	}
 				    });
+			    
+			        // validation for commercial form fields
+			        $('#commercial-form').on('submit',function(e){
+			        	if(companytype.validity.valueMissing) {
+			           		companytype_error.innerHTML = "Please select company type.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(companyname.validity.valueMissing) {
+			           		companyname_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(companyname.validity.tooShort) {
+			           		companyname_error.innerHTML = "Fill in at least 3 characters.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			        	if(contact_firstname.validity.valueMissing) {
+			           		cf_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(contact_firstname.validity.tooShort) {
+			           		cf_error.innerHTML = "Fill in at least 3 characters.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(contact_lastname.validity.valueMissing) {
+			           		cl_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(contact_lastname.validity.tooShort) {
+			           		cl_error.innerHTML = "Fill in at least 3 characters.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(c_email.validity.valueMissing) {
+			           		c_email_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(c_email.validity.typeMismatch || email.validity.tooShort) {
+			           		c_email_error.innerHTML = "Fill in valid E-mail Id.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(c_phonenumber.validity.valueMissing) {
+			           		c_phonenumber_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(c_phonenumber.validity.tooShort) {
+			           		c_phonenumber_error.innerHTML = "Fill in valid 10 digits phone number.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	// Phone number 1 format validation
+			           	if(!c_phonenumber.value.match(c_phonenumber_pattern)) {
+			           		c_phonenumber_error.innerHTML = "Fill in valid 10 digits phone number.";
+					        c_phonenumber_error.style.display = "block";
+					        form_commercial.classList.add('was-validated');
+					        e.preventDefault();
+			           	}
+			           	if(phonetype.validity.valueMissing) {
+			           		phonetype_error.innerHTML = "Please select one option.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(c_phonenumber2.validity.valueMissing) {
+			           		c_phonenumber2_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(c_phonenumber2.validity.tooShort) {
+			           		c_phonenumber2_error.innerHTML = "Fill in valid 10 digits mobile number.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	// Phone number 2 format validation
+			           	if(!c_phonenumber2.value.match(c_phonenumber2_pattern)) {
+			           		if(c_phonenumber2.value.length == 0){
+			           			c_phonenumber2_error.style.display = "none";
+			           		}
+			           		else{
+			           			c_phonenumber2_error.innerHTML = "Fill in valid 10 digits mobile number.";
+					        	c_phonenumber2_error.style.display = "block";
+					        	form_commercial.classList.add('was-validated');
+					        	e.preventDefault();
+					        }
+			           	}
+			           	if(phonetype2.validity.valueMissing) {
+			           		phonetype2_error.innerHTML = "Please select one option.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			        });
+			        
+				    // To hide phone field format error text
+				    $('#c_phonenumber1').on('input',function(){
+				           	if(c_phonenumber.value.match(c_phonenumber_pattern)) {
+				           		pn_error.style.display = "none";
+				           	}
+				    });
+				    $('#c_phonenumber2').on('input',function(){
+				           	if(c_phonenumber2.value.match(c_phonenumber2_pattern)) {
+				           		mobile_error.style.display = "none";
+				           	}
+				    });
 			   }); 
+		         
 		}, false);
 	})();    
 	</script>
