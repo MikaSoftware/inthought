@@ -58,13 +58,13 @@
 	  <hr class="nav-divider">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-cog"></i> Settings</a>
+              <a class="nav-link" href="http://inthought.pw/settings/"><i class="fas fa-cog"></i> Settings</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-address-card"></i> Profile</a>
+              <a class="nav-link" href="http://inthought.pw/profile/"><i class="fas fa-address-card"></i> Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Help</a>
+              <a class="nav-link" href="http://inthought.pw/help/"><i class="fas fa-question-circle"></i> Help</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -93,12 +93,12 @@
 	    	<p class="border-bottom mb-3 pb-1 text-secondary">Company Details</p>
 		  <div class="form-row">
 		    <div class="form-group col-md-12 mb-4">
-		      <label for="companyname">Company name *</label>
+		      <label for="companyname">Company name</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="companyname" name="companyname" placeholder="Company name" minlength="3" required>
 		      <div id="companyname-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-7 mb-4 p-0">
-		      <label for="companytype">Company type *</label>
+		      <label for="companytype">Company type</label>
 		      <select class="custom-select form-control-lg border-success" id="companytype" name="companytype" required>
 		        <option value="" selected>Type...</option>
 		        <option value="private">Private</option>
@@ -108,19 +108,19 @@
 		      <div id="companytype-error" class="invalid-feedback"></div>
 		  </div>
 		    <div class="form-group col-md-12 mb-4">
-		      <label for="contact-firstname">Contact First name</label>
+		      <label for="contact-firstname">Contact first name</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="contact-firstname" name="contact-firstname" placeholder="First name" minlength="3" required>
 		      <div id="c_firstname-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-12 mb-4">
-		      <label for="contact-lastname">Contact Last name</label>
+		      <label for="contact-lastname">Contact last name</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="contact-lastname" name="contact-lastname" placeholder="Last name" minlength="3" required>
 		      <div id="c_lastname-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-8 mb-4">
-		      <label for="c_phonenumber1">Phone 1 *</label>
-		      <input type="text" class="form-control form-control-lg border border-primary" id="c_phonenumber1" name="c_phonenumber1" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14" required>
-		      <div id="phonenumber1-error" class="invalid-feedback"></div>
+		      <label for="phonenumber">Phone 1</label>
+		      <input type="text" class="form-control form-control-lg border border-primary" id="phonenumber" name="phonenumber" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14" required>
+		      <div id="phonenumber-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-4 mb-4">
 		      <label for="phonetype">&nbsp;</label>
@@ -129,21 +129,21 @@
 		        <option value="home">Home</option>
 		        <option value="work">Work</option>
 		      </select>
-		      <div id="phonetype1-error" class="invalid-feedback"></div>
+		      <div id="phonetype-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-8 mb-4">
-		      <label for="c_phonenumber2">Phone 2 (optional)</label>
-		      <input type="text" class="form-control form-control-lg border border-primary" id="c_phonenumber2" name="c_phonenumber2" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14" required>
-		      <div id="phonenumber2-error" class="invalid-feedback"></div>
+		      <label for="phonenumber1">Phone 2 (optional)</label>
+		      <input type="text" class="form-control form-control-lg border border-primary" id="phonenumber1" name="phonenumber1" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14">
+		      <div id="phonenumber1-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-4 mb-4">
-		      <label for="phonetype2">&nbsp;</label>
-		      <select class="custom-select form-control-lg border-primary" id="phonetype2" name="phonetype2">
+		      <label for="phonetype1">&nbsp;</label>
+		      <select class="custom-select form-control-lg border-primary" id="phonetype1" name="phonetype1">
 		        <option value="mobile">Mobile</option>
 		        <option value="home">Home</option>
 		        <option value="work">Work</option>
 		      </select>
-		      <div id="phonetype2-error" class="invalid-feedback"></div>
+		      <div id="phonetype1-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-12 mb-4">
 		      <label for="c_email">E-Mail (optional)</label>
@@ -154,37 +154,34 @@
 		  <div class="form-group mt-2 mb-4">
 			  <p class="mb-1">Ok to E-Mail?</p>
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="c_ok_to_email" name="c_ok_to_email" value="yes" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="c_ok_to_email">Yes</label>
+			     <input type="radio" id="c-ok-email" name="c-ok-email" value="Yes" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="c-ok-email">Yes</label>
 			  </div>
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="c_ok_to_email2" name="c_ok_to_email" value="no" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="c_ok_to_email2">No</label>
+			     <input type="radio" id="c-ok-email2" name="c-ok-email" value="No" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="c-ok-email2">No</label>
+			     <div id="c-ok-email-error" class="invalid-feedback ml-2"></div>
 			  </div>
 		  </div>
 		  <div class="form-group mt-2 mb-4">
 			  <p class="mb-1">Ok to Text?</p>
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="c_ok_to_text" name="c_ok_to_text" value="yes" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="c_ok_to_text">Yes</label>
+			     <input type="radio" id="c-ok-text" name="c-ok-text" value="Yes" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="c-ok-text">Yes</label>
 			  </div>
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="c_ok_to_text2" name="c_ok_to_text" value="no" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="c_ok_to_text2">No</label>
+			     <input type="radio" id="c-ok-text2" name="c-ok-text" value="No" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="c-ok-text2">No</label>
+			     <div id="c-ok-text-error" class="invalid-feedback ml-2"></div>
 			  </div>
 		  </div>
-		  
-		  <span class="text-secondary font-italic">* Indicates required.</span>
 		  <div class="form-group col-md-12 mb-3 mx-auto text-center">
 			<button class="btn btn-success btn-lg btn-fxw mt-4" type="submit"><i class="fas fa-plus"></i> Add Client</button>
 		  </div>
 		</form>
-	    </div>
-        	
+	    </div>	
 	</div>
-
 	<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
-
         </main>
       </div>
     </div>	
@@ -220,130 +217,163 @@
 			    var contact_lastname = document.getElementById('contact-lastname');
 			    var cl_error = document.getElementById('c_lastname-error');
 			    
-			    var c_phonenumber = document.getElementById('c_phonenumber1');
-			    var c_phonenumber_error = document.getElementById('phonenumber1-error');
-			    var c_phonenumber_pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			    var phonenumber = document.getElementById('phonenumber');
+			    var phonenumber_error = document.getElementById('phonenumber-error');
+			    var phonenumber_pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 			    var phonetype = document.getElementById('phonetype');
-			    var phonetype_error = document.getElementById('phonetype1-error');
+			    var phonetype_error = document.getElementById('phonetype-error');
 			    
-			    var c_phonenumber2 = document.getElementById('c_phonenumber2');
-			    var c_phonenumber2_error = document.getElementById('phonenumber2-error');
-			    var c_phonenumber2_pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-			    var phonetype2 = document.getElementById('phonetype2');
-			    var phonetype2_error = document.getElementById('phonetype2-error');
+			    var phonenumber1 = document.getElementById('phonenumber1');
+			    var phonenumber1_error = document.getElementById('phonenumber1-error');
+			    var phonenumber1_pattern = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			    var phonetype1 = document.getElementById('phonetype1');
+			    var phonetype1_error = document.getElementById('phonetype1-error');
 			    
 			    var c_email = document.getElementById('c_email');
 			    var c_email_error = document.getElementById('c_email-error');
+			    
+			    var c_ok_email = document.getElementById('c-ok-email');
+			    var c_ok_email_error = document.getElementById('c-ok-email-error');
+			    
+			    var c_ok_text = document.getElementById('c-ok-text');
+			    var c_ok_text_error = document.getElementById('c-ok-text-error');
 			    
 			    // Loop over them and prevent submission
 			    $(function(){
 			     	// validation for commercial form fields
 			        $('#commercial-form').on('submit',function(e){
-			        	if(companytype.validity.valueMissing) {
-			           		companytype_error.innerHTML = "Please select company type.";
+			        
+			        	if (phonenumber.validity.valueMissing) {
+			           		phonenumber_error.innerHTML = "Field should not be blank.";
 			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
-			           	if(companyname.validity.valueMissing) {
-			           		companyname_error.innerHTML = "Field should not be blank.";
+			           	
+			           	if (phonenumber.validity.tooShort) {
+			           		phonenumber_error.innerHTML = "Fill in valid 10 digits phone number.";
 			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
-			           	if(companyname.validity.tooShort) {
-			           		companyname_error.innerHTML = "Fill in at least 3 characters.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			        	if(contact_firstname.validity.valueMissing) {
-			           		cf_error.innerHTML = "Field should not be blank.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			           	if(contact_firstname.validity.tooShort) {
-			           		cf_error.innerHTML = "Fill in at least 3 characters.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			           	if(contact_lastname.validity.valueMissing) {
-			           		cl_error.innerHTML = "Field should not be blank.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			           	if(contact_lastname.validity.tooShort) {
-			           		cl_error.innerHTML = "Fill in at least 3 characters.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			           	if(c_email.validity.valueMissing) {
-			           		c_email_error.innerHTML = "Field should not be blank.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			           	if(c_email.validity.typeMismatch || email.validity.tooShort) {
-			           		c_email_error.innerHTML = "Fill in valid E-mail Id.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			           	if(c_phonenumber.validity.valueMissing) {
-			           		c_phonenumber_error.innerHTML = "Field should not be blank.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			           	if(c_phonenumber.validity.tooShort) {
-			           		c_phonenumber_error.innerHTML = "Fill in valid 10 digits phone number.";
-			           		form_commercial.classList.add('was-validated');
-			           		e.preventDefault();
-			           	}
-			           	// Phone number 1 format validation
-			           	if(!c_phonenumber.value.match(c_phonenumber_pattern)) {
-			           		c_phonenumber_error.innerHTML = "Fill in valid 10 digits phone number.";
-					        c_phonenumber_error.style.display = "block";
-					        form_commercial.classList.add('was-validated');
-					        e.preventDefault();
-			           	}
-			           	if(phonetype.validity.valueMissing) {
+			           	
+			           	if (phonetype.validity.valueMissing) {
 			           		phonetype_error.innerHTML = "Please select one option.";
 			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
-			           	if(c_phonenumber2.validity.valueMissing) {
-			           		c_phonenumber2_error.innerHTML = "Field should not be blank.";
+			           	
+			           	if (phonenumber1.validity.valueMissing) {
+			           		phonenumber1_error.innerHTML = "Field should not be blank.";
 			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
-			           	if(c_phonenumber2.validity.tooShort) {
-			           		c_phonenumber2_error.innerHTML = "Fill in valid 10 digits mobile number.";
+			           	
+			           	if (phonenumber1.validity.tooShort) {
+			           		phonenumber1_error.innerHTML = "Fill in valid 10 digits mobile number.";
 			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
-			           	// Phone number 2 format validation
-			           	if(!c_phonenumber2.value.match(c_phonenumber2_pattern)) {
-			           		if(c_phonenumber2.value.length == 0){
-			           			c_phonenumber2_error.style.display = "none";
-			           		}
-			           		else{
-			           			c_phonenumber2_error.innerHTML = "Fill in valid 10 digits mobile number.";
-					        	c_phonenumber2_error.style.display = "block";
+			           	
+			           	if (phonetype1.validity.valueMissing) {
+			           		phonetype1_error.innerHTML = "Please select one option.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			        	if (companytype.validity.valueMissing) {
+			           		companytype_error.innerHTML = "Please select company type.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (companyname.validity.valueMissing) {
+			           		companyname_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (companyname.validity.tooShort) {
+			           		companyname_error.innerHTML = "Fill in at least 3 characters.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			        	if (contact_firstname.validity.valueMissing) {
+			           		cf_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (contact_firstname.validity.tooShort) {
+			           		cf_error.innerHTML = "Fill in at least 3 characters.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (contact_lastname.validity.valueMissing) {
+			           		cl_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (contact_lastname.validity.tooShort) {
+			           		cl_error.innerHTML = "Fill in at least 3 characters.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (c_email.validity.valueMissing) {
+			           		c_email_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (c_email.validity.typeMismatch || c_email.validity.tooShort) {
+			           		c_email_error.innerHTML = "Fill in valid E-mail Id.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	// Phone number format validation
+			           	if (!phonenumber.value.match(phonenumber_pattern)) {
+			           		phonenumber_error.innerHTML = "Fill in valid 10 digits phone number.";
+					        phonenumber_error.style.display = "block";
+					        form_commercial.classList.add('was-validated');
+					        e.preventDefault();
+			           	}
+			           	
+			           	if (!phonenumber1.value.match(phonenumber1_pattern)) {
+			           		if(phonenumber1.value.length == 0){
+			           			phonenumber1_error.style.display = "none";
+			           		} else {
+			           			phonenumber1_error.innerHTML = "Fill in valid 10 digits mobile number.";
+					        	phonenumber1_error.style.display = "block";
 					        	form_commercial.classList.add('was-validated');
 					        	e.preventDefault();
 					        }
 			           	}
-			           	if(phonetype2.validity.valueMissing) {
-			           		phonetype2_error.innerHTML = "Please select one option.";
+			           	
+			           	if (!c_ok_email.validity.valid) {
+			           		c_ok_email_error.innerHTML = "Please select option.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (!c_ok_text.validity.valid) {
+			           		c_ok_text_error.innerHTML = "Please select option.";
 			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			        });
 			        
 				    // To hide phone field format error text
-				    $('#c_phonenumber1').on('input',function(){
-				           	if(c_phonenumber.value.match(c_phonenumber_pattern)) {
-				           		pn_error.style.display = "none";
+				    $('#phonenumber').on('input',function(){
+				           	if(phonenumber.value.match(phonenumber_pattern)) {
+				           		phonenumber_error.style.display = "none";
 				           	}
 				    });
-				    $('#c_phonenumber2').on('input',function(){
-				           	if(c_phonenumber2.value.match(c_phonenumber2_pattern)) {
-				           		mobile_error.style.display = "none";
+				    $('#phonenumber1').on('input',function(){
+				           	if(phonenumber1.value.match(phonenumber1_pattern)) {
+				           		phonenumber1_error.style.display = "none";
 				           	}
 				    });
 			   }); 

@@ -58,13 +58,13 @@
 	  <hr class="nav-divider">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-cog"></i> Settings</a>
+              <a class="nav-link" href="http://inthought.pw/settings/"><i class="fas fa-cog"></i> Settings</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-address-card"></i> Profile</a>
+              <a class="nav-link" href="http://inthought.pw/profile/"><i class="fas fa-address-card"></i> Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Help</a>
+              <a class="nav-link" href="http://inthought.pw/help/"><i class="fas fa-question-circle"></i> Help</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -85,7 +85,7 @@
 	</div>
 	<h1>Add Client</h1>
 	
-	<div class="col-sm-5 mx-auto mt-2">
+	<div class="col-md-5 mx-auto mt-2">
 	<!-- Residential form -->
 	    <div class="col-sm-12 fade show active" id="residential-form" aria-labelledby="residential">
 	    <h3 class="pt-4 pb-2 text-center">Residential</h3>
@@ -93,17 +93,17 @@
 	    	<p class="border-bottom mb-3 pb-1 text-secondary">Personal Details</p>
 		  <div class="form-row">
 		    <div class="form-group col-md-12 mb-4">
-		      <label for="firstname">First name *</label>
+		      <label for="firstname">First name</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="firstname" name="firstname" placeholder="First name" minlength="3" required>
 		      <div id="firstname-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-12 mb-4">
-		      <label for="lastname">Last name *</label>
+		      <label for="lastname">Last name</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="lastname" name="lastname" placeholder="Last name" minlength="3" required>
 		      <div id="lastname-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-7 mb-4">
-		      <label for="phonenumber">Phone *</label>
+		      <label for="phonenumber">Phone</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="phonenumber" name="phonenumber" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14" required>
 		      <div id="phonenumber-error" class="invalid-feedback"></div>
 		    </div>
@@ -121,27 +121,29 @@
 		  <div class="form-group mt-2 mb-4">
 			  <p class="mb-1">Ok to E-Mail?</p>
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="ok_to_email" name="ok_to_email" value="yes" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="ok_to_email">Yes</label>
+			     <input type="radio" id="ok-email" name="ok-email" value="Yes" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="ok-email">Yes</label>
 			  </div>
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="ok_to_email2" name="ok_to_email" value="no" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="ok_to_email2">No</label>
+			     <input type="radio" id="ok-email2" name="ok-email" value="No" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="ok-email2">No</label>
+			     <div id="ok-email-error" class="invalid-feedback ml-2"></div>
 			  </div>
 		  </div>
 		  <div class="form-group mt-2 mb-4">
 			  <p class="mb-1">Ok to Text?</p>
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="ok_to_text" name="ok_to_text" value="yes" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="ok_to_text">Yes</label>
+			     <input type="radio" id="ok-text" name="ok-text" value="Yes" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="ok-text">Yes</label>
 			  </div>
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
-			     <input type="radio" id="ok_to_text2" name="ok_to_text" value="no" class="custom-control-input form-check-input">
-			     <label class="custom-control-label form-check-label" for="ok_to_text2">No</label>
+			     <input type="radio" id="ok-text2" name="ok-text" value="No" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="ok-text2">No</label>
+			     <div id="ok-text-error" class="invalid-feedback ml-2"></div>
 			  </div>
 		  </div>
 		  <div class="form-group p-0 col-md-7 mb-4">
-		      	<label for="dob">Date of Birth *</label>
+		      	<label for="dob">Date of Birth</label>
 		      	<div class="input-group input-group-lg">
 			      <input type="text" class="form-control form-control-lg border border-success" id="dob" name="dob" placeholder="mm/dd/yyyy" required>
 			      <div class="input-group-append">
@@ -151,7 +153,7 @@
 		      	</div>
 		  </div>
 		  <div class="form-group col-md-7 mb-4 p-0">
-		      <label for="gender">Gender *</label>
+		      <label for="gender">Gender</label>
 		      <select class="custom-select form-control-lg border-success" id="gender" name="gender" required>
 		        <option value="" selected>Gender...</option>
 		        <option value="male">Male</option>
@@ -159,7 +161,6 @@
 		      </select>
 		      <div id="gender-error" class="invalid-feedback"></div>
 		  </div>
-		  <span class="text-secondary font-italic">* Indicates required.</span>
 		  <div class="form-group col-md-12 mb-3 mx-auto text-center">
 			<button class="btn btn-success btn-lg btn-fxw mt-4" type="submit"><i class="fas fa-plus"></i> Add Client</button>
 		  </div>
@@ -220,6 +221,12 @@
 			    var gender = document.getElementById('gender');
 			    var gender_error = document.getElementById('gender-error');
 			    
+			    var ok_email = document.getElementById('ok-email');
+			    var ok_email_error = document.getElementById('ok-email-error');
+			    
+			    var ok_text = document.getElementById('ok-text');
+			    var ok_text_error = document.getElementById('ok-text-error');
+			    
 			    // Loop over them and prevent submission
 			    $(function(){
 			     	// validation for residential form fields
@@ -229,51 +236,61 @@
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(firstname.validity.tooShort) {
 			           		f_error.innerHTML = "Fill in at least 3 characters.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(lastname.validity.valueMissing) {
 			           		l_error.innerHTML = "Field should not be blank.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(lastname.validity.tooShort) {
 			           		l_error.innerHTML = "Fill in at least 3 characters.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(email.validity.valueMissing) {
 			           		email_error.innerHTML = "Field should not be blank.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(email.validity.typeMismatch || email.validity.tooShort) {
 			           		email_error.innerHTML = "Fill in valid E-mail Id.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(dob.validity.valueMissing) {
 			           		dob_error.innerHTML = "Please select date of birth.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(gender.validity.valueMissing) {
 			           		gender_error.innerHTML = "Please select client gender.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(phonenumber.validity.valueMissing) {
 			           		pn_error.innerHTML = "Field should not be blank.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(phonenumber.validity.tooShort) {
 			           		pn_error.innerHTML = "Fill in valid 10 digits phone number.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	// Phone number format validation
 			           	if(!phonenumber.value.match(pn_pattern)) {
 			           		pn_error.innerHTML = "Fill in valid 10 digits phone number.";
@@ -281,16 +298,19 @@
 					        form_residential.classList.add('was-validated');
 					        e.preventDefault();
 			           	}
+			           	
 			           	if(mobilenumber.validity.valueMissing) {
 			           		mobile_error.innerHTML = "Field should not be blank.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	if(mobilenumber.validity.tooShort) {
 			           		mobile_error.innerHTML = "Fill in valid 10 digits mobile number.";
 			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
+			           	
 			           	// Mobile number format validation Which Is Optional
 			           	if(!mobilenumber.value.match(mobile_pattern)) {
 			           		if(mobilenumber.value.length == 0){
@@ -302,6 +322,18 @@
 					        	form_residential.classList.add('was-validated');
 					        	e.preventDefault();
 					        }
+			           	}
+			           	
+			           	if(!ok_email.validity.valid) {
+			           		ok_email_error.innerHTML = "Please select option.";
+			           		form_residential.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if(!ok_text.validity.valid) {
+			           		ok_text_error.innerHTML = "Please select option.";
+			           		form_residential.classList.add('was-validated');
+			           		e.preventDefault();
 			           	}
 			        });
 			   

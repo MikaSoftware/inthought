@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Over55 Clients List</title>
+  	<title>Over55 Add Commercial Client</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="Over 55 (London) inc." content="">
 	<link rel="icon" href="../favicon.ico">
+	
 	<link href="../assets/css/base.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Scrollbar Custom CSS -->
@@ -57,10 +58,10 @@
 	  <hr class="nav-divider">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="http://inthought.pw/settings/"><i class="fa fa-cog"></i> Settings</a>
+              <a class="nav-link" href="http://inthought.pw/settings/"><i class="fas fa-cog"></i> Settings</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://inthought.pw/profile/"><i class="fa fa-address-card"></i> Profile</a>
+              <a class="nav-link" href="http://inthought.pw/profile/"><i class="fas fa-address-card"></i> Profile</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/help/"><i class="fas fa-question-circle"></i> Help</a>
@@ -74,7 +75,7 @@
         <nav aria-label="breadcrumb">
 	  	<ol class="breadcrumb">
 	    		<li class="breadcrumb-item"><span class="text-muted">You are here:</span> <a href="index.html">Clients</a></li>
-	    		<li class="breadcrumb-item active" aria-current="page">Clients List</li>
+	    		<li class="breadcrumb-item active" aria-current="page">Add Client</li>
 	  	</ol>
 	</nav>
 	<div class="row">
@@ -82,91 +83,28 @@
 			<a class="btn btn-primary btn-lg" href="index.html" role="button"><i class="fas fa-arrow-left"></i> Back to Clients Home</a>
 		</div>
 	</div>
-	<h1>Clients List</h1>
-	<div class="col-sm-12 mx-auto mt-4 pt-3 mb-4 pb-2">
-		<!-- Red Bar -->
-		<div class="alert bg-danger text-white alert-dismissible fade show" role="alert">
-		  Client named <strong>John</strong> can not be created.
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		    <span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<!-- Orange Bar -->
-		<div class="alert bg-warning alert-dismissible fade show" role="alert">
-		  <strong>Duplicate client</strong> created. You sure!
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		    <span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<!-- Blue Bar -->
-		<div class="alert bg-primary text-white alert-dismissible fade show" role="alert">
-		  <strong>Holy guacamole!</strong> You should check in on some of recent clients below.
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		    <span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<!-- Green Bar -->
-		<div class="alert bg-success text-white alert-dismissible fade show" role="alert">
-		  Client <strong>Successfully</strong> created.
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		    <span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<!-- Dark Grey Bar -->
-		<div class="alert bg-dark text-white alert-dismissible fade show" role="alert">
-		  <strong>Normal message!</strong> this is normal message notification.
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		    <span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
-		<!-- Grey Bar -->
-		<div class="alert bg-secondary text-white alert-dismissible fade show" role="alert">
-		  <strong>Hello!</strong> you should check our clients below.
-		  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		    <span aria-hidden="true">&times;</span>
-		  </button>
-		</div>
+	<h1>Add Client</h1>
+	<div class="col-sm-6 mx-auto mt-2">
+	    <!-- Screen 3 form -->
+	    <div class="col-sm-12">
+	    <h3 class="pt-4 pb-2 text-center">Add Skills</h3>
+	    	<form id="skills-form" method="get" class="needs-validation" action="" novalidate>
+	    	  <div class="form-row">
+		    <div class="form-group col-sm-12 mb-4 p-0">
+		      <label for="skills">Add skills seperated by a comma</label>
+		      <input type="text" class="form-control form-control-lg border-primary" id="skills" placeholder="Add skill.." minlength="3" name="skills" data-role="tagsinput" required>
+		      <small class="form-text text-muted">Only 50 skills are allowed.</small>  
+		      <div id="skills-error" class="invalid-feedback"></div>
+		    </div>
+		  </div>
+		  <div class="form-group col-md-12 mb-3 mx-auto text-center p-0">
+			<button class="btn btn-success btn-lg mt-4 float-right pl-4 pr-4" type="submit">Next <i class="fas fa-arrow-right"></i></button>
+			<button class="btn btn-orange btn-lg mt-4 float-left pl-4 pr-4" type="button"><i class="fas fa-arrow-left"></i> Back</button>
+		  </div>
+		</form>
+	    </div>
 	</div>
-	<div class="col-sm-12 mx-auto mt-4 pt-4">
-	   <h2>Recent Clients</h2>
-	   <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Phone</th>
-                  <th>E-Mail</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Susan</td>
-                  <td>Fairley</td>
-                  <td>(519)438-1111</td>
-                  <td>susan@over55london.ca</td>
-                </tr>
-                <tr>
-                  <td>1,002</td>
-                  <td>Rodolfo</td>
-                  <td>Martinez</td>
-                  <td>(519)521-3135</td>
-                  <td>rodolfo@over55london.ca</td>
-                </tr>
-                <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>	
-	</div>
-		<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
+	<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
         </main>
       </div>
     </div>	
@@ -179,6 +117,60 @@
 	<!-- Custom Scroller Js CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="../assets/js/custom.js"></script>
+        <script src="../assets/js/bootstrap-tagsinput.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+	// Fields Validation
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+	  'use strict';
+	  	window.addEventListener('load', function() {
+	  		    // Fetch all the forms fields we want to apply custom Bootstrap validation styles to
+			    
+			    var form_skills = document.getElementById('skills-form');
+			    var skills = document.getElementById('skills');
+			    var skills_error = document.getElementById('skills-error');
+			    
+			    // Loop over them and prevent submission
+			    $(function(){
+			     	// validation for commercial form fields
+			        $('#skills-form').on('submit',function(e){
+			        	if(skills.validity.tooShort) {
+			           		skills_error.innerHTML = "Fill in at least 3 characters.";
+			           		form_skills.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if(skills.validity.valueMissing) {
+			           		skills_error.innerHTML = "Field should not be blank.";
+			           		form_skills.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	if ( $('.bootstrap-tagsinput').hasClass("bootstrap-tagsinput-max") ) {
+						skills_error.innerHTML = "Only 50 Skills are allowed";
+			           		form_skills.classList.add('was-validated');
+			           		e.preventDefault();
+					}
+			        });
+				$('#skills-form').on('keyup keypress', function(e) {
+				  var keyCode = e.keyCode || e.which;
+				  if (keyCode === 13) { 
+				    e.preventDefault();
+				    return false;
+				  }
+				});
+				$(".bootstrap-tagsinput input").on('input',function(){  
+					if ( $('.bootstrap-tagsinput').hasClass("bootstrap-tagsinput-max") ) {
+						skills_error.innerHTML = "Reached maximum Limit.";
+			           		form_skills.classList.add('was-validated');
+			           		skills_error.style.display = "block";
+					} else {
+						skills_error.style.display = "none";
+					}
+				});  
+			   }); 
+		         
+		}, false);
+	})();    
+	</script>
   </body>
 </html>

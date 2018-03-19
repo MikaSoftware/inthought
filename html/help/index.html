@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Over55 Resources</title>
+  	<title>Over55 Technical Support</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
@@ -51,7 +51,7 @@
               <a class="nav-link" href="http://inthought.pw/partners/"><i class="fa fa-handshake"></i> Partners</a>
             </li>
 	    <li class="nav-item">
-              <a class="nav-link active" href="http://inthought.pw/resources"><i class="fas fa-file-alt"></i> Resources</a>
+              <a class="nav-link" href="http://inthought.pw/resources/"><i class="fas fa-file-alt"></i> Resources</a>
             </li>
           </ul>
 	  <hr class="nav-divider">
@@ -63,7 +63,7 @@
               <a class="nav-link" href="http://inthought.pw/profile/"><i class="fa fa-address-card"></i> Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://inthought.pw/help/"><i class="fa fa-question-circle"></i> Help</a>
+              <a class="nav-link active" href="http://inthought.pw/help/"><i class="fa fa-question-circle"></i> Help</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fa fa-sign-out-alt"></i> Logout</a>
@@ -72,56 +72,73 @@
         </nav>
         
         <main id="main" role="main" class="bg-light">
-          <h1>Resources</h1>
-             <div class="album py-5">
-	        <div class="container">
-	          <div class="row">
-	            <div class="col-md-4">
-	              <div class="card mb-4 box-shadow">
-	                <div class="card-custom-top">
-		      		<i class="fas fa-file-alt fa-4x"></i>
-	                </div>
-	                <div class="card-body">
-	                  <h5 class="card-title font-weight-bold">Forms</h5>
-	                  <p class="card-text">Access forms & documents.</p>
-	                  <div class="text-center">
-	                  	<a href="#" class="btn btn-success btn-lg" type="button">View <i class="fas fa-arrow-circle-right"></i></a>
-	                  </div>
-	                </div>
-	              </div>
-	            </div>
-	            <div class="col-md-4">
-	              <div class="card mb-4 box-shadow">
-	                <div class="card-custom-top">
-		      		<i class="fab fa-youtube fa-4x"></i>
-	                </div>
-	                <div class="card-body">
-	                  <h5 class="card-title font-weight-bold">Videos</h5>
-	                  <p class="card-text">Access videos & media.</p>
-	                  <div class="text-center">
-	                  	<a href="#" class="btn btn-success btn-lg" type="button">View <i class="fas fa-arrow-circle-right"></i></a>
-	                  </div>
-	                </div>
-	              </div>
-	            </div>
-	            <div class="col-md-4">
-	              <div class="card mb-4 box-shadow">
-	                <div class="card-custom-top">
-		      		<i class="fas fa-cogs fa-4x"></i>
-	                </div>
-	                <div class="card-body">
-	                  <h5 class="card-title font-weight-bold">System</h5>
-	                  <p class="card-text">Access system FAQs.</p>
-	                  <div class="text-center">
-	                  	<a href="#" class="btn btn-success btn-lg" type="button">View <i class="fas fa-arrow-circle-right"></i></a>
-	                  </div>
-	                </div>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-		  <a id="return-to-top" href="#" class="btn-primary btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
+        <div class="row">
+		<div class="col-sm-6 text-center mx-auto py-3">
+		<h1 class="border-0 mt-4">Support Center</h1>
+		<p class="text-secondary mb-4">Sometimes you just need a little help.</p>
+		<!-- Basic Search -->
+		    <form id="searchForm" method="get" class="needs-validation" action="" novalidate>
+			<div class="input-group mb-2">
+			  <input type="text" class="form-control form-control-lg border border-secondary" id="keyword" name="search" placeholder="How can we help?" minlength="3" required="" />
+			  <div class="input-group-append">
+			    <button class="btn btn-secondary btn-lg" type="submit"><i class="fas fa-search"></i></button>
+			  </div>
+			  <div id="search-error" class="invalid-feedback"></div>
+			</div>
+		    </form>
+		</div>
+	</div>
+	<div class="row my-4 pt-4">
+		<div class="col-md-4">
+			<div class="card text-center">
+			  <p class="mt-4 pt-3 mb-2"><i class="far fa-file-alt fa-4x text-muted"></i></p>
+			  <div class="card-body">
+			    <h3 class="card-title">Knowledge Base</h3>
+			  </div>
+			  <ul class="list-group list-group-flush">
+			    <li class="list-group-item">How to enable labs features</li>
+			    <li class="list-group-item">Preparing your server for installation</li>
+			    <li class="list-group-item">Lorem ipsum dolor sit amet</li>
+			  </ul>
+			  <div class="card-body">
+			    <a href="#" class="card-link">See More</a>
+			  </div>
+			</div>		
+		</div>
+		<div class="col-md-4">
+			<div class="card text-center">
+			  <p class="mt-4 pt-3 mb-2"><i class="fas fa-question fa-4x text-muted" data-fa-transform="shrink-10 up-.5" data-fa-mask="fas fa-comment"></i>
+			  <div class="card-body">
+			    <h3 class="card-title">FAQ</h3>
+			  </div>
+			  <ul class="list-group list-group-flush">
+			    <li class="list-group-item">How to enable labs features?</li>
+			    <li class="list-group-item">What is Over55?</li>
+			    <li class="list-group-item">Lorem ipsum dolor sit amet?</li>
+			  </ul>
+			  <div class="card-body">
+			    <a href="#" class="card-link">See More</a>
+			  </div>
+			</div>	
+		</div>
+		<div class="col-md-4">
+			<div class="card text-center">
+			  <p class="mt-4 pt-3 mb-2"><i class="far fa-envelope fa-4x text-muted"></i></p>
+			  <div class="card-body">
+			    <h3 class="card-title">Contact</h3>
+			  </div>
+			  <ul class="list-group list-group-flush text-left">
+			    <li class="list-group-item"><i class="fas fa-envelope"></i> example@example.com</li>
+			    <li class="list-group-item"><i class="fas fa-phone"></i> (xxx) xxx-xxxx</li>
+			    <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> XYZ street Ontario, CA</li>
+			  </ul>
+			  <div class="card-body">
+			    <a href="#" class="card-link">Contact Us</a>
+			  </div>
+			</div>	
+		</div>
+	</div>
+		<a id="return-to-top" href="#" class="btn-primary btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
         </main>
       </div>
     </div>
@@ -134,7 +151,25 @@
 	<!-- Custom Scroller Js CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="../assets/js/custom.js"></script>
-        <script src="../assets/js/bootstrap-tagsinput.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+		var $star_rating = $('.star-rating .fa-star');
+		var $star_rating_value = $('.star-rating');
+		var SetRatingStar = function() {
+		  return $star_rating.each(function() {
+		    if (parseInt($star_rating_value.data('rating')) >= parseInt($(this).data('rating'))) {
+		      return $(this).removeClass('far').addClass('fas');
+		    } else if(Math.round($star_rating_value.data('rating')) == parseInt($(this).data('rating'))) {
+		      return $(this).removeClass('fa-star').addClass('fas fa-star-half');
+		    } else {
+		      return $(this).removeClass('fas').addClass('far');
+		    }
+		  });
+		};
+		SetRatingStar();
+		$(document).ready(function() {
+		
+		});
+        </script>
   </body>
 </html>

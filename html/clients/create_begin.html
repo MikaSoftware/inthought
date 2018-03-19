@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Over55 Team</title>
+  	<title>Over55 Residential Client Confirmation</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="Over 55 (London) inc." content="">
-	<link rel="icon" href="favicon.ico">
+	<link rel="icon" href="../favicon.ico">
 	<link href="../assets/css/base.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
 <body>
     <header class="navbar navbar-dark fixed-top bg-dark justify-content-between">
@@ -38,13 +39,13 @@
               <a class="nav-link" href="http://inthought.pw/reports/"><i class="fa fa-chart-bar"></i> Reports</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://inthought.pw/clients/"><i class="fa fa-user-circle"></i> Clients</a>
+              <a class="nav-link active" href="http://inthought.pw/clients/"><i class="fa fa-user-circle"></i> Clients</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/members/"><i class="fas fa-user"></i> Members</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link active" href="http://inthought.pw/team/"><i class="fa fa-users"></i> Team</a>
+            <li class="nav-item">
+              <a class="nav-link" href="http://inthought.pw/team/"><i class="fa fa-users"></i> Team</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/partners/"><i class="fa fa-handshake"></i> Partners</a>
@@ -65,55 +66,40 @@
               <a class="nav-link" href="http://inthought.pw/help/"><i class="fa fa-question-circle"></i> Help</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+              <a class="nav-link" href="#"><i class="fa fa-sign-out-alt"></i> Logout</a>
             </li>
-          </ul>          
+          </ul>
         </nav>
         
-        <main id="main" role="main">
-          <h1>Team Members</h1>
-
-          <section class="row text-center placeholders">
-            <div class="col-sm-4 placeholder">
-	      <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-pink">
-	        <a href="team_add.html" class="d-block link-ndecor" title="Add Member">
-	      		<h1 class="r-circle"><i class="fas fa-plus fa-3x"></i></h1>
-	      	</a>
-              </div>
-              <h4>Add</h4>
-              <div class="text-muted">Add Member</div>
-            </div>
-            <div class="col-sm-4 placeholder">
-              <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-dgreen">
-                <a href="team_search.html" class="d-block link-ndecor" title="Search Members">
-	      		<h1 class="r-circle"><i class="fas fa-search fa-3x"></i></h1>
-	      	</a>
-              </div>
-              <h4>Search</h4>
-              <span class="text-muted">Search Members</span>
-            </div>
-            <div class="col-sm-4 placeholder">
-              <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-dblue">
-                <a href="team_list.html" class="d-block link-ndecor" title="View Members">
-	      		<h1 class="r-circle"><i class="fas fa-list-alt fa-3x"></i></h1>
-	      	</a>
-	      </div>
-              <h4>View</h4>
-              <span class="text-muted">View Members</span>
-            </div>
-          </section>
-
-	<div class="jumbotron">
-	  <h1 class="display-4">Announcements</h1>
-	  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-	  <hr class="my-4">
-	  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-	  <p class="lead">
-	    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-	  </p>
-	</div>  
-	
-	<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
+        <main id="main" role="main" class="bg-light">
+          <h1>Add Client</h1>
+		<div class="row py-5 justify-content-md-center">
+			<div class="col-md-4 my-4 mx-3">
+			    <div class="card box-shadow text-center mx-auto">
+			      <div class="card-custom-top-2">
+		      		<i class="fas fa-user fa-3x"></i>
+	                      </div>
+			      <div class="card-body">
+			        <h3 class="card-title">Residential</h3>
+			        <p class="card-text">Add a Residential Client</p>
+			        <a href="client_add.html" class="btn btn-success btn-lg">Go <i class="fas fa-arrow-circle-right"></i></a>
+			      </div>
+			    </div>
+			</div>
+			<div class="col-md-4 my-4 mx-3">
+			    <div class="card box-shadow text-center mx-auto">
+			      <div class="card-custom-top-2">
+		      		<i class="fas fa-building fa-3x"></i>
+	                      </div>
+			      <div class="card-body">
+			        <h3 class="card-title">Commercial</h3>
+			        <p class="card-text">Add a Commercial Client</p>
+			        <a href="client_add_comm.html" class="btn btn-success btn-lg">Go <i class="fas fa-arrow-circle-right"></i></a>
+			      </div>
+			    </div>
+			</div>
+		</div>
+		<a id="return-to-top" href="#" class="btn-primary btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
         </main>
       </div>
     </div>
@@ -124,7 +110,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 	<!-- Custom Scroller Js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../assets/js/custom.js"></script>
+        <script src="../assets/js/bootstrap-tagsinput.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </body>
 </html>
