@@ -7,7 +7,6 @@
 	<meta name="description" content="">
 	<meta name="Over 55 (London) inc." content="">
 	<link rel="icon" href="../favicon.ico">
-	
 	<link href="../assets/css/base.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Scrollbar Custom CSS -->
@@ -89,15 +88,13 @@
 	    <div class="col-sm-12">
 	    <h3 class="pt-4 pb-2 text-center">Add Skills</h3>
 	    	<form id="skills-form" method="get" class="needs-validation" action="" novalidate>
-	    	  <div class="form-row">
-		    <div class="form-group col-sm-12 mb-4 p-0">
+	    	  <div class="form-group mb-3">
 		      <label for="skills">Add skills seperated by a comma</label>
 		      <input type="text" class="form-control form-control-lg border-primary" id="skills" placeholder="Add skill.." minlength="3" name="skills" data-role="tagsinput" required>
 		      <small class="form-text text-muted">Only 50 skills are allowed.</small>  
 		      <div id="skills-error" class="invalid-feedback"></div>
-		    </div>
 		  </div>
-		  <div class="form-group col-md-12 mb-3 mx-auto text-center p-0">
+		  <div class="form-group mb-3 mx-auto text-center p-0">
 			<button class="btn btn-success btn-lg mt-4 float-right pl-4 pr-4" type="submit">Next <i class="fas fa-arrow-right"></i></button>
 			<button class="btn btn-orange btn-lg mt-4 float-left pl-4 pr-4" type="button"><i class="fas fa-arrow-left"></i> Back</button>
 		  </div>
@@ -119,6 +116,7 @@
         <script src="../assets/js/custom.js"></script>
         <script src="../assets/js/bootstrap-tagsinput.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="../assets/js/typeahead.bundle.js"></script>
         <script>
 	// Fields Validation
 	// Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -143,6 +141,7 @@
 			           	if(skills.validity.valueMissing) {
 			           		skills_error.innerHTML = "Field should not be blank.";
 			           		form_skills.classList.add('was-validated');
+			           		skills_error.style.display = "block";
 			           		e.preventDefault();
 			           	}
 			           	if ( $('.bootstrap-tagsinput').hasClass("bootstrap-tagsinput-max") ) {
@@ -171,6 +170,29 @@
 		         
 		}, false);
 	})();    
+	</script>
+	<script>
+		var skills = new Bloodhound({
+		  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+		  queryTokenizer: Bloodhound.tokenizers.whitespace,
+		  prefetch: {
+		    url: '../assets/js/skills.json',
+		    filter: function(list) {
+		      return $.map(list, function(skill) {
+		        return { name: skill }; });
+		    }
+		  }
+		});
+		skills.initialize();
+		
+		$('input').tagsinput({
+		  typeaheadjs: {
+		    name: 'skills',
+		    displayKey: 'name',
+		    valueKey: 'name',
+		    source: skills.ttAdapter()
+		  },
+		});
 	</script>
   </body>
 </html>

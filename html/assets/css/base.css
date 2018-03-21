@@ -23,7 +23,7 @@ body {
   padding-bottom: 40px;
   background-color: #eee;
 }
-
+.font-b6 { font-weight: 600!important; }
 @media only screen and (max-width: 767px) {
 body.active{
   overflow: hidden;
@@ -179,7 +179,11 @@ a.plain-link{
     display: block!important;
 }
 }
-
+.badge-lg { 
+	font-size: 100% !important;
+	margin: 4px 2px; 
+	line-height: 1.2 !important;
+}
 .card-custom-top {
     height: 225px;
     width: 100%;
@@ -320,7 +324,7 @@ table.custom-cell-w tr th{width:35% !important;}
 
 /** Tags input cloud css **/
 .bootstrap-tagsinput {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #007bff;
   color: #495057;
   background-clip: padding-box;
@@ -347,14 +351,14 @@ table.custom-cell-w tr th{width:35% !important;}
   max-width: inherit;
 }
 .bootstrap-tagsinput.form-control input::-moz-placeholder {
-  color: #777;
+  color: #777777;
   opacity: 1;
 }
 .bootstrap-tagsinput.form-control input:-ms-input-placeholder {
-  color: #777;
+  color: #777777;
 }
 .bootstrap-tagsinput.form-control input::-webkit-input-placeholder {
-  color: #777;
+  color: #777777;
 }
 .bootstrap-tagsinput input:focus {
   border: none;
@@ -366,6 +370,8 @@ table.custom-cell-w tr th{width:35% !important;}
   font-weight: 600;
   margin-right: .2em;
   padding: .25em .4em .35em;
+  text-align: left !important;
+  white-space: normal !important;
 }
 .bootstrap-tagsinput .tag [data-role="remove"] {
   margin-left: 6px;
@@ -383,4 +389,43 @@ table.custom-cell-w tr th{width:35% !important;}
 }
 .bootstrap-tagsinput-max{
   border: 1px solid #dc3545 !important;
+}
+.tt-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 200px;
+	margin: 2px 0 0;
+	list-style: none;
+	background-color: #ffffff;
+	border: 1px solid rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+.tt-menu .tt-suggestion {
+	font-size: 14px;
+	font-weight: 600;
+	color: #333333;
+	padding: 5px 10px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.tt-menu .tt-suggestion:last-child { border-bottom: 0; }
+.tt-menu .tt-suggestion:hover, .tt-menu .tt-suggestion:active {
+	background-color: #33404F !important;
+	color: #ffffff;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.tt-menu .tt-suggestion.tt-cursor {
+	background-color: #17a2b8;
+	color: #ffffff;
+	cursor: pointer;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
 }

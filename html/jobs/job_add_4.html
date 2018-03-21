@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Over55 Add Residential Client</title>
+  	<title>Over55 Add Residential Job</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
@@ -33,13 +33,13 @@
               <a class="nav-link" href="http://inthought.pw/tasks/"><i class="fa fa-list-ol"></i> Tasks</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://inthought.pw/jobs/"><i class="fa fa-wrench"></i> Jobs</a>
+              <a class="nav-link active" href="http://inthought.pw/jobs/"><i class="fa fa-wrench"></i> Jobs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/reports/"><i class="fa fa-chart-bar"></i> Reports</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="http://inthought.pw/clients/"><i class="fa fa-user-circle"></i> Clients</a>
+              <a class="nav-link" href="http://inthought.pw/clients/"><i class="fa fa-user-circle"></i> Clients</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/members/"><i class="fas fa-user"></i> Members</a>
@@ -54,7 +54,7 @@
               <a class="nav-link" href="http://inthought.pw/resources/"><i class="fas fa-file-alt"></i> Resources</a>
             </li>
           </ul>
-	  <hr class="nav-divider">
+		  <hr class="nav-divider">
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/settings/"><i class="fas fa-cog"></i> Settings</a>
@@ -70,28 +70,28 @@
             </li>
           </ul>
         </nav>
+        
         <main id="main" role="main">
         <nav aria-label="breadcrumb">
 	  	<ol class="breadcrumb">
-	    		<li class="breadcrumb-item"><span class="text-muted">You are here:</span> <a href="index.html">Clients</a></li>
-	    		<li class="breadcrumb-item active" aria-current="page">Add Client</li>
+	    		<li class="breadcrumb-item"><span class="text-muted">You are here:</span> <a href="index.html">Jobs</a></li>
+	    		<li class="breadcrumb-item active" aria-current="page">Add Job</li>
 	  	</ol>
 	</nav>
 	<div class="row">
 		<div class="col-sm-3 p-3 mb-2">
-			<a class="btn btn-primary btn-lg" href="index.html" role="button"><i class="fas fa-arrow-left"></i> Back to Clients Home</a>
+			<a class="btn btn-primary btn-lg" href="index.html" role="button"><i class="fas fa-arrow-left"></i> Back to Jobs Home</a>
 		</div>
 	</div>
-	<h1>Add Client</h1>
-	<div class="col-sm-6 mx-auto mt-2">
-	    <!-- Screen 3 form -->
-	    <div class="col-sm-12">
-	    <h3 class="pt-4 pb-2 text-center">Add Skills</h3>
-	    	<form id="skills-form" method="get" class="needs-validation" action="" novalidate>
-	    	  <div class="form-group mb-3">
-		      <label for="skills">Add skills seperated by a comma</label>
+	<h1>Add Job</h1>
+	
+	<div class="col-md-6 mx-auto mt-2">
+		<h3 class="pt-4 pb-2 text-center">Add Residential Job</h3>
+		<form id="residential-job-skill" method="post" class="needs-validation" action="" novalidate>
+	    	  <div class="form-group my-3">
+		      <label for="skills" class="font-b6">Please select required job skill(s):</label>
 		      <input type="text" class="form-control form-control-lg border-primary" id="skills" placeholder="Add skill.." minlength="3" name="skills" data-role="tagsinput" required>
-		      <small class="form-text text-muted">Only 50 skills are allowed.</small>  
+		      <small class="form-text text-muted">At least 1 skill must be entered.</small>  
 		      <div id="skills-error" class="invalid-feedback"></div>
 		  </div>
 		  <div class="form-group mb-3 mx-auto text-center p-0">
@@ -99,12 +99,11 @@
 			<button class="btn btn-orange btn-lg mt-4 float-left pl-4 pr-4" type="button"><i class="fas fa-arrow-left"></i> Back</button>
 		  </div>
 		</form>
-	    </div>
 	</div>
-	<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
+	<a id="return-to-top" href="#" class="btn-primary btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
         </main>
       </div>
-    </div>	
+    </div>
     <!-- jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -125,14 +124,14 @@
 	  	window.addEventListener('load', function() {
 	  		    // Fetch all the forms fields we want to apply custom Bootstrap validation styles to
 			    
-			    var form_skills = document.getElementById('skills-form');
+			    var form_skills = document.getElementById('residential-job-skill');
 			    var skills = document.getElementById('skills');
 			    var skills_error = document.getElementById('skills-error');
 			    
 			    // Loop over them and prevent submission
 			    $(function(){
 			     	// validation for commercial form fields
-			        $('#skills-form').on('submit',function(e){
+			        $('#residential-job-skill').on('submit',function(e){
 			        	if(skills.validity.tooShort) {
 			           		skills_error.innerHTML = "Fill in at least 1 tag/skill.";
 			           		form_skills.classList.add('was-validated');
@@ -150,7 +149,7 @@
 			           		e.preventDefault();
 					}
 			        });
-				$('#skills-form').on('keyup keypress', function(e) {
+				$('#residential-job-skill').on('keyup keypress', function(e) {
 				  var keyCode = e.keyCode || e.which;
 				  if (keyCode === 13) { 
 				    e.preventDefault();
@@ -194,6 +193,7 @@
 		    valueKey: 'name',
 		    source: skills.ttAdapter()
 		  },
+		  freeInput: false
 		});
 	</script>
   </body>

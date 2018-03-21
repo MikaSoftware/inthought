@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Over55 Add Residential Job</title>
+  	<title>Over55 Add Commercial Job</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
@@ -86,10 +86,15 @@
 	<h1>Add Job</h1>
 	
 	<div class="col-md-5 mx-auto mt-2">
-		<h3 class="pt-4 pb-2 text-center">Add a new Residential Job</h3>
-		<form id="residential-job" method="get" class="needs-validation" action="" novalidate>
+		<h3 class="pt-4 pb-2 text-center">Add a new Commercial Job</h3>
+		<form id="commercial-job" method="get" class="needs-validation" action="" novalidate>
 	    	<p class="border-bottom mb-3 pb-1 text-secondary">Please enter at least one field.</p>
 		  <div class="form-row">
+		    <div class="form-group col-md-12 mb-4">
+		      <label for="companyname">Company name</label>
+		      <input type="text" class="form-control form-control-lg border border-primary" id="companyname" name="companyname" placeholder="Company name" minlength="3">
+		      <div id="companyname-error" class="invalid-feedback"></div>
+		    </div>
 		    <div class="form-group col-md-12 mb-4">
 		      <label for="firstname">First name</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="firstname" name="firstname" placeholder="First name" minlength="3">
@@ -143,7 +148,10 @@
 			    * Simply Add Html < input > tag attribute required inside input field.
 			    */
 			     
-			    var form_residential = document.getElementById('residential-job');
+			    var form_commercial = document.getElementById('commercial-job');
+			    
+			    var companyname = document.getElementById('companyname');
+			    var companyname_error = document.getElementById('companyname-error');
 			    
 			    var firstname = document.getElementById('firstname');
 			    var f_error = document.getElementById('firstname-error');
@@ -161,52 +169,65 @@
 			    // Loop over them and prevent submission
 			    $(function(){
 			     	// validation for residential form fields
-			        $('#residential-job').on('submit',function(e){
+			        $('#commercial-job').on('submit',function(e){
+			        	
+			        	if (companyname.validity.valueMissing) {
+			           		companyname_error.innerHTML = "Field should not be blank.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
+			           	if (companyname.validity.tooShort) {
+			           		companyname_error.innerHTML = "Fill in at least 3 characters.";
+			           		form_commercial.classList.add('was-validated');
+			           		e.preventDefault();
+			           	}
+			           	
 			        	if(firstname.validity.valueMissing) {
 			           		f_error.innerHTML = "Field should not be blank.";
-			           		form_residential.classList.add('was-validated');
+			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(firstname.validity.tooShort) {
 			           		f_error.innerHTML = "Fill in at least 3 characters.";
-			           		form_residential.classList.add('was-validated');
+			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(lastname.validity.valueMissing) {
 			           		l_error.innerHTML = "Field should not be blank.";
-			           		form_residential.classList.add('was-validated');
+			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(lastname.validity.tooShort) {
 			           		l_error.innerHTML = "Fill in at least 3 characters.";
-			           		form_residential.classList.add('was-validated');
+			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(email.validity.valueMissing) {
 			           		email_error.innerHTML = "Field should not be blank.";
-			           		form_residential.classList.add('was-validated');
+			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(email.validity.typeMismatch || email.validity.tooShort) {
 			           		email_error.innerHTML = "Fill in valid E-mail Id.";
-			           		form_residential.classList.add('was-validated');
+			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(phonenumber.validity.valueMissing) {
 			           		pn_error.innerHTML = "Field should not be blank.";
-			           		form_residential.classList.add('was-validated');
+			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(phonenumber.validity.tooShort) {
 			           		pn_error.innerHTML = "Fill in valid 10 digits phone number.";
-			           		form_residential.classList.add('was-validated');
+			           		form_commercial.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
 			           	
@@ -214,7 +235,7 @@
 			           	if(!phonenumber.value.match(pn_pattern) && phonenumber.value.length != 0) {
 			           		pn_error.innerHTML = "Fill in valid 10 digits phffone number.";
 					        pn_error.style.display = "block";
-					        form_residential.classList.add('was-validated');
+					        form_commercial.classList.add('was-validated');
 					        e.preventDefault();
 			           	}
 			           	
@@ -255,7 +276,7 @@
 			    }
 			    
 			    $(function(){
-			        $('#residential-job').on('submit',function(e){
+			        $('#commercial-job').on('submit',function(e){
 			            var oneFilled = checkFields($(this));
 			            if(oneFilled === true) {
 			                return true;

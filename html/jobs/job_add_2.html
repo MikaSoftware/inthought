@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Over55 Add Residential Client</title>
+  	<title>Over55 Add Residential Job</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
@@ -33,13 +33,13 @@
               <a class="nav-link" href="http://inthought.pw/tasks/"><i class="fa fa-list-ol"></i> Tasks</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://inthought.pw/jobs/"><i class="fa fa-wrench"></i> Jobs</a>
+              <a class="nav-link active" href="http://inthought.pw/jobs/"><i class="fa fa-wrench"></i> Jobs</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/reports/"><i class="fa fa-chart-bar"></i> Reports</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="http://inthought.pw/clients/"><i class="fa fa-user-circle"></i> Clients</a>
+              <a class="nav-link" href="http://inthought.pw/clients/"><i class="fa fa-user-circle"></i> Clients</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/members/"><i class="fas fa-user"></i> Members</a>
@@ -54,7 +54,7 @@
               <a class="nav-link" href="http://inthought.pw/resources/"><i class="fas fa-file-alt"></i> Resources</a>
             </li>
           </ul>
-	  <hr class="nav-divider">
+		  <hr class="nav-divider">
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/settings/"><i class="fas fa-cog"></i> Settings</a>
@@ -70,41 +70,58 @@
             </li>
           </ul>
         </nav>
+        
         <main id="main" role="main">
         <nav aria-label="breadcrumb">
 	  	<ol class="breadcrumb">
-	    		<li class="breadcrumb-item"><span class="text-muted">You are here:</span> <a href="index.html">Clients</a></li>
-	    		<li class="breadcrumb-item active" aria-current="page">Add Client</li>
+	    		<li class="breadcrumb-item"><span class="text-muted">You are here:</span> <a href="index.html">Jobs</a></li>
+	    		<li class="breadcrumb-item active" aria-current="page">Add Job</li>
 	  	</ol>
 	</nav>
 	<div class="row">
 		<div class="col-sm-3 p-3 mb-2">
-			<a class="btn btn-primary btn-lg" href="index.html" role="button"><i class="fas fa-arrow-left"></i> Back to Clients Home</a>
+			<a class="btn btn-primary btn-lg" href="index.html" role="button"><i class="fas fa-arrow-left"></i> Back to Jobs Home</a>
 		</div>
 	</div>
-	<h1>Add Client</h1>
-	<div class="col-sm-6 mx-auto mt-2">
-	    <!-- Screen 3 form -->
-	    <div class="col-sm-12">
-	    <h3 class="pt-4 pb-2 text-center">Add Skills</h3>
-	    	<form id="skills-form" method="get" class="needs-validation" action="" novalidate>
-	    	  <div class="form-group mb-3">
-		      <label for="skills">Add skills seperated by a comma</label>
-		      <input type="text" class="form-control form-control-lg border-primary" id="skills" placeholder="Add skill.." minlength="3" name="skills" data-role="tagsinput" required>
-		      <small class="form-text text-muted">Only 50 skills are allowed.</small>  
-		      <div id="skills-error" class="invalid-feedback"></div>
+	<h1>Add Job</h1>
+	
+	<div class="col-md-5 mx-auto mt-2">
+		<h3 class="pt-4 pb-2 text-center">Add Residential Job</h3>
+		<form id="residential-job" method="post" class="needs-validation" action="" novalidate>
+	    	  <div class="form-group my-3 py-2">
+			  <p class="mb-1 font-b6">Is this job one time or ongoing?</p>
+			  <div class="form-radio custom-control custom-radio custom-control-inline">
+			     <input type="radio" id="job-type" name="job-type" value="One-time" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="job-type">One time</label>
+			  </div>
+			  <div class="form-radio custom-control custom-radio custom-control-inline">
+			     <input type="radio" id="job-type2" name="job-type" value="Ongoing" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="job-type2">Ongoing</label>
+			     <div id="job-type-error" class="invalid-feedback ml-2"></div>
+			  </div>
 		  </div>
-		  <div class="form-group mb-3 mx-auto text-center p-0">
+		  <div class="form-group my-3 pt-2">
+			  <p class="mb-1 font-b6">Is this job a home support service?</p>
+			  <div class="form-radio custom-control custom-radio custom-control-inline">
+			     <input type="radio" id="home-support" name="home-support" value="Yes" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="home-support">Yes</label>
+			  </div>
+			  <div class="form-radio custom-control custom-radio custom-control-inline">
+			     <input type="radio" id="home-support2" name="home-support" value="No" class="custom-control-input form-check-input" required>
+			     <label class="custom-control-label form-check-label" for="home-support2">No</label>
+			     <div id="home-support-error" class="invalid-feedback ml-2"></div>
+			  </div>
+		  </div>
+	    	  <div class="form-group col-md-12 mb-3 p-0 mx-auto text-center">
 			<button class="btn btn-success btn-lg mt-4 float-right pl-4 pr-4" type="submit">Next <i class="fas fa-arrow-right"></i></button>
 			<button class="btn btn-orange btn-lg mt-4 float-left pl-4 pr-4" type="button"><i class="fas fa-arrow-left"></i> Back</button>
 		  </div>
 		</form>
-	    </div>
 	</div>
-	<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
+	<a id="return-to-top" href="#" class="btn-primary btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
         </main>
       </div>
-    </div>	
+    </div>
     <!-- jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -114,9 +131,7 @@
 	<!-- Custom Scroller Js CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="../assets/js/custom.js"></script>
-        <script src="../assets/js/bootstrap-tagsinput.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="../assets/js/typeahead.bundle.js"></script>
         <script>
 	// Fields Validation
 	// Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -124,77 +139,37 @@
 	  'use strict';
 	  	window.addEventListener('load', function() {
 	  		    // Fetch all the forms fields we want to apply custom Bootstrap validation styles to
+			     
+			    var form_residential = document.getElementById('residential-job');
 			    
-			    var form_skills = document.getElementById('skills-form');
-			    var skills = document.getElementById('skills');
-			    var skills_error = document.getElementById('skills-error');
+			    var job_type = document.getElementById('job-type');
+			    var job_type_error = document.getElementById('job-type-error');
+			    
+			    var home_support = document.getElementById('home-support');
+			    var home_support_error = document.getElementById('home-support-error');
 			    
 			    // Loop over them and prevent submission
 			    $(function(){
-			     	// validation for commercial form fields
-			        $('#skills-form').on('submit',function(e){
-			        	if(skills.validity.tooShort) {
-			           		skills_error.innerHTML = "Fill in at least 1 tag/skill.";
-			           		form_skills.classList.add('was-validated');
+			     	// validation for residential form fields
+			        $('#residential-job').on('submit',function(e){
+			        	if(!job_type.validity.valid) {
+			           		job_type_error.innerHTML = "Please select option.";
+			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
-			           	if(skills.validity.valueMissing) {
-			           		skills_error.innerHTML = "Field should not be blank.";
-			           		form_skills.classList.add('was-validated');
-			           		skills_error.style.display = "block";
+			           	
+			           	if(!home_support.validity.valid) {
+			           		home_support_error.innerHTML = "Please select option.";
+			           		form_residential.classList.add('was-validated');
 			           		e.preventDefault();
 			           	}
-			           	if ( $('.bootstrap-tagsinput').hasClass("bootstrap-tagsinput-max") ) {
-						skills_error.innerHTML = "Only 50 Skills are allowed";
-			           		form_skills.classList.add('was-validated');
-			           		e.preventDefault();
-					}
+			           	
 			        });
-				$('#skills-form').on('keyup keypress', function(e) {
-				  var keyCode = e.keyCode || e.which;
-				  if (keyCode === 13) { 
-				    e.preventDefault();
-				    return false;
-				  }
-				});
-				$(".bootstrap-tagsinput input").on('input',function(){  
-					if ( $('.bootstrap-tagsinput').hasClass("bootstrap-tagsinput-max") ) {
-						skills_error.innerHTML = "Reached maximum Limit.";
-			           		form_skills.classList.add('was-validated');
-			           		skills_error.style.display = "block";
-					} else {
-						skills_error.style.display = "none";
-					}
-					
-				});
-				
-			   });
-		         
+			   
+			   }); 
+			   
 		}, false);
 	})();    
-	</script>
-	<script>
-		var skills = new Bloodhound({
-		  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
-		  queryTokenizer: Bloodhound.tokenizers.whitespace,
-		  prefetch: {
-		    url: '../assets/js/skills.json',
-		    filter: function(list) {
-		      return $.map(list, function(skill) {
-		        return { name: skill }; });
-		    }
-		  }
-		});
-		skills.initialize();
-		
-		$('input').tagsinput({
-		  typeaheadjs: {
-		    name: 'skills',
-		    displayKey: 'name',
-		    valueKey: 'name',
-		    source: skills.ttAdapter()
-		  },
-		});
 	</script>
   </body>
 </html>
