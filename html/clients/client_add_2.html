@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="Over 55 (London) inc." content="">
 	<link rel="icon" href="../favicon.ico">
-	
+
 	<link href="../assets/css/base.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Scrollbar Custom CSS -->
@@ -84,7 +84,7 @@
 		</div>
 	</div>
 	<h1>Add Client</h1>
-	
+
 	<div class="col-sm-6 mx-auto mt-2">
 	    <!-- Commercial form -->
 	    <div class="col-sm-12" id="commercial-form" aria-labelledby="commercial">
@@ -135,12 +135,12 @@
 			<button class="btn btn-orange btn-lg mt-4 float-left pl-4 pr-4" type="button"><i class="fas fa-arrow-left"></i> Back</button>
 		  </div>
 		</form>
-	    </div>	
+	    </div>
 	</div>
 	<a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
         </main>
       </div>
-    </div>	
+    </div>
     <!-- jQuery library -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -158,28 +158,28 @@
 	  });
 	  loadState('CA');
 	});
-	  
+
         let c_dropdown = $('#country');
 	c_dropdown.empty();
 	c_dropdown.append('<option selected="true" disabled>Choose Country</option>');
 	c_dropdown.prop('selectedIndex', 1);
-	
+
 	const state = '../assets/js/provinces.json';
 	const country = '../assets/js/countries.json';
-	
+
 	// Populate dropdown with list of countries
 	$.getJSON(country, function (data) {
 	  $.each(data, function (key, entry) {
 	    	c_dropdown.append($('<option></option>').attr('value', entry.code).text(entry.country));
 	  })
 	});
-	
+
 	function loadState(countryId){
 		let p_dropdown = $('#province');
 		p_dropdown.empty();
 		p_dropdown.append('<option selected="true" disabled>Choose State/Province</option>');
 		p_dropdown.prop('selectedIndex', 0);
-		
+
 		// Populate dropdown with list of provinces
 		$.getJSON(state, function (data) {
 		  $.each(data, function (key, entry) {
@@ -192,37 +192,37 @@
 			p_dropdown.prop('selectedIndex', 1);
 		}
 	}
-	
+
 	// Fields Validation
 	// Example starter JavaScript for disabling form submissions if there are invalid fields
 	(function() {
 	  'use strict';
 	  	window.addEventListener('load', function() {
 	  		    // Fetch all the forms fields we want to apply custom Bootstrap validation styles to
-			    
+
 			    var address_form = document.getElementById('address-form');
-			    
+
 			    var street_no = document.getElementById('street_no');
 			    var streetnumber_error = document.getElementById('street-error');
-			    
+
 			    var streetname = document.getElementById('streetname');
 			    var streetname_error = document.getElementById('streetname-error');
-			    
+
 			    var neighbourhood = document.getElementById('neighbourhood');
 			    var neighbourhood_error = document.getElementById('neighbourhood-error');
-			    
+
 			    var city = document.getElementById('city');
 			    var city_error = document.getElementById('city-error');
-			    
+
 			    var province = document.getElementById('province');
 			    var province_error = document.getElementById('province-error');
-			    
+
 			    var postal_code = document.getElementById('postal-code');
 			    var postal_code_error = document.getElementById('postal-code-error');
-			    
+
 			    var country = document.getElementById('country');
 			    var country_error = document.getElementById('country-error');
-			    
+
 			    // Loop over them and prevent submission
 			    $(function(){
 			     	// validation for commercial form fields
@@ -278,10 +278,10 @@
 			           		e.preventDefault();
 			           	}
 			        });
-			   }); 
-		         
+			   });
+
 		}, false);
-	})();    
+	})();
 	</script>
   </body>
 </html>
