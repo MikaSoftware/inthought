@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<title>Over55 Dashboard</title>
+  	<title>Over55 Notes/Comments Screen</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
 <body>
     <header class="navbar navbar-dark fixed-top bg-dark justify-content-between">
@@ -53,78 +54,96 @@
 	    <li class="nav-item">
               <a class="nav-link" href="http://inthought.pw/resources/"><i class="fas fa-file-alt"></i> Resources</a>
             </li>
-          </ul>    
-    	  <hr class="nav-divider">
+          </ul>
+	  <hr class="nav-divider">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-cog"></i> Settings</a>
+              <a class="nav-link" href="http://inthought.pw/settings/"><i class="fas fa-cog"></i> Settings</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-address-card"></i> Profile</a>
+              <a class="nav-link" href="http://inthought.pw/profile/"><i class="fas fa-address-card"></i> Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Help</a>
+              <a class="nav-link" href="http://inthought.pw/help/"><i class="fas fa-question-circle"></i> Help</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </li>
-          </ul>
+          </ul>          
         </nav>
         
         <main id="main" role="main">
-          <h1>Dashboard</h1>
-
-          <section class="row text-center placeholders">
-            <div class="col-sm-3 placeholder">
-	      <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-pink">
-	      	<a href="http://inthought.pw/clients/" class="d-block link-ndecor" title="Clients">
-	      		<h1 class="circle-title">1,100</h1>
-	      	</a>
-              </div>
-              <h4>Clients</h4>
-              <div class="text-muted">View your client list</div>
-            </div>
-            <div class="col-sm-3 placeholder">
-              <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-dgreen">
-                <a href="http://inthought.pw/jobs/" class="d-block link-ndecor" title="Jobs">
-	      		<h1 class="circle-title">10,000</h1>
-	      	</a>
-              </div>
-              <h4>Jobs</h4>
-              <span class="text-muted">View your job history</span>
-            </div>
-            <div class="col-sm-3 placeholder">
-              <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-dblue">
-	      	<a href="http://inthought.pw/members/" class="d-block link-ndecor" title="Members">
-	      		<h1 class="circle-title">2,200</h1>
-	      	</a>
-              </div>
-              <h4>Associate Members</h4>
-              <span class="text-muted">View Member Data</span>
-            </div>
-            <div class="col-sm-3 placeholder">
-              <div class="rounded-circle mx-auto mt-4 mb-4 circle-200 bg-orange">
-                <a href="http://inthought.pw/tasks/" class="d-block link-ndecor" title="Tasks">
-                	<h1 class="circle-title">12</h1>
-                </a>
-              </div>
-              <h4>Tasks</h4>
-              <span class="text-muted">View your tasks</span>
-            </div>
-          </section>
-
-          <div class="jumbotron">
-		  <h1 class="display-4">Announcements</h1>
-		  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-		  <hr class="my-4">
-		  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-		  <p class="lead">
-		    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-		  </p>
-	  </div>  
 	
-          <a id="return-to-top" href="#" class="btn-primary btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
-
+	<div class="container">
+	  <div class="row align-items-start">
+	  <h1>Comments/Notes Screen</h1>
+	    <div class="col-lg-12">
+	        <!-- First Item -->
+		<div class="media mt-4">
+		  <img class="mr-3 img-head" src="../assets/img/placeholder.png" alt="Image">
+		  <div class="media-body">
+		    <div class="row">
+		    	<h5 class="mt-0 col-sm-10"><strong>Media heading</strong></h5>
+		    	<h6 class="col-sm-2 text-secondary text-right">April 28, 2018 <br> 3:53 a.m</h6>
+		    </div>
+		    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.</p>
+		  </div>
+		</div>
+		<!-- End first item -->
+		<!-- Second Item -->
+		<div class="media mt-4">
+		  <img class="mr-3 img-head" src="../assets/img/placeholder.png" alt="Image">
+		  <div class="media-body">
+		    <div class="row">
+		    	<h5 class="mt-0 col-sm-10"><strong>Media heading</strong></h5>
+		    	<h6 class="col-sm-2 text-secondary text-right">April 28, 2018 <br> 3:53 a.m</h6>
+		    </div>
+		    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+		
+		    <!-- Second nested item -->
+		    <div class="media mt-3">
+		      <a class="pr-3" href="#">
+		        <img src="../assets/img/placeholder.png" alt="Image" class="img-head">
+		      </a>
+		      <div class="media-body">
+		        <div class="row">
+		    		<h5 class="mt-0 col-sm-10"><strong>Media heading</strong></h5>
+		    		<h6 class="col-sm-2 text-secondary text-right">April 28, 2018 <br> 3:53 a.m</h6>
+		    	</div>
+		        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- End second item -->
+		<!-- Last Item and so on-->
+		<div class="media mt-4">
+		  <img class="mr-3 img-head" src="../assets/img/placeholder.png" alt="Image">
+		  <div class="media-body">
+		    <div class="row">
+		    	<h5 class="mt-0 col-sm-10"><strong>Media heading</strong></h5>
+		    	<h6 class="col-sm-2 text-secondary text-right">April 28, 2018 <br> 3:53 a.m</h6>
+		    </div>
+		    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+		  </div>
+		</div>
+		<!-- End item -->
+		<hr class="my-4">
+		<!-- Add note form -->
+		<form>
+		  <div class="form-group">
+		    <label for="exampleFormControlTextarea1">Add Comment/Note: </label>
+    		    <textarea class="form-control form-control-lg border border-primary" id="exampleFormControlTextarea1" placeholder="Write a note here..." rows="4"></textarea>
+		    <small id="emailHelp" class="form-text text-muted">Maximum 1,000 characters.</small>
+		  </div>
+		  <button type="submit" class="btn btn-lg float-right pl-4 pr-4 btn-primary">Add Note</button>
+		</form>
+	    </div>
+	  </div>
+	</div>
+	
+        <a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i class="fas fa-angle-up fa-2x"></i></a>
+          
         </main>
       </div>
     </div>
@@ -137,5 +156,6 @@
 	<!-- Custom Scroller Js CDN -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="../assets/js/custom.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </body>
 </html>

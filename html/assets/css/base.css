@@ -502,3 +502,7 @@ table.custom-cell-w tr th{width:35% !important;}
 	margin: 5px auto 10px;
 }
 }
+.img-head {
+	width: 64px;
+	height: auto;
+}

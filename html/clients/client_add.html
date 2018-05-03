@@ -182,8 +182,12 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
  	 $( function() {
- 	   $( "#dob" ).datepicker();
+ 	   $( "#dob" ).datepicker({
+                dateFormat: 'yy-mm-dd',
+                maxDate: 'today'
+         });
 	 } );
+	    
  	</script>
 	<script>
 	// Fields Validation
