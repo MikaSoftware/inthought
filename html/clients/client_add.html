@@ -89,31 +89,44 @@
 	    <h3 class="pt-4 pb-2 text-center">Residential</h3>
 	    	<form id="residential-form" method="post" class="needs-validation" action="" novalidate>
 	    	<p class="border-bottom mb-3 pb-1 text-secondary">Personal Details</p>
+	    	
+	    	<!-- Error Alert -->
+		<div id="all-errors" class="alert alert-error fade show" role="alert">
+		  <strong>There were errors during registration:</strong>
+		  
+		  <div id="firstname-error" class="form-error"></div>
+		  <div id="lastname-error" class="form-error"></div>
+		  <div id="phonenumber-error" class="form-error"></div>
+		  <div id="mobilenumber-error" class="form-error"></div>
+		  <div id="email-error" class="form-error"></div>
+		  <div id="ok-email-error" class="form-error"></div>
+		  <div id="ok-text-error" class="form-error"></div>
+		  <div id="dob-error" class="form-error"></div>
+		  <div id="gender-error" class="form-error"></div>
+		  
+		</div>
+		<!-- Error Alert Ends -->
+		
 		  <div class="form-row">
 		    <div class="form-group col-md-12 mb-4">
 		      <label for="firstname">First name</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="firstname" name="firstname" placeholder="First name" minlength="3" required>
-		      <div id="firstname-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-12 mb-4">
 		      <label for="lastname">Last name</label>
-		      <input type="text" class="form-control form-control-lg border border-primary" id="lastname" name="lastname" placeholder="Last name" minlength="3" required>
-		      <div id="lastname-error" class="invalid-feedback"></div>
+		      <input type="text" class="form-control form-control-lg border border-primary" id="lastname" name="lastname" placeholder="Last name" minlength="3" required>      
 		    </div>
 		    <div class="form-group col-md-7 mb-4">
 		      <label for="phonenumber">Phone</label>
 		      <input type="text" class="form-control form-control-lg border border-primary" id="phonenumber" name="phonenumber" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14" required>
-		      <div id="phonenumber-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-7 mb-4">
 		      <label for="mobilenumber">Mobile (optional)</label>
 		      <input type="text" class="form-control form-control-lg border border-success" id="mobilenumber" name="mobilenumber" placeholder="(xxx) xxx-xxxx" minlength="10" maxlength="14">
-		      <div id="mobilenumber-error" class="invalid-feedback"></div>
 		    </div>
 		    <div class="form-group col-md-12 mb-4">
 		      <label for="email">E-Mail (optional)</label>
 		      <input type="email" class="form-control form-control-lg border border-success" id="email" name="email" placeholder="Email Address">
-		      <div id="email-error" class="invalid-feedback"></div>
 		    </div>
 		  </div>
 		  <div class="form-group mt-2 mb-4">
@@ -125,7 +138,6 @@
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
 			     <input type="radio" id="ok-email2" name="ok-email" value="No" class="custom-control-input form-check-input" required>
 			     <label class="custom-control-label form-check-label" for="ok-email2">No</label>
-			     <div id="ok-email-error" class="invalid-feedback ml-2"></div>
 			  </div>
 		  </div>
 		  <div class="form-group mt-2 mb-4">
@@ -137,7 +149,6 @@
 			  <div class="form-radio custom-control custom-radio custom-control-inline">
 			     <input type="radio" id="ok-text2" name="ok-text" value="No" class="custom-control-input form-check-input" required>
 			     <label class="custom-control-label form-check-label" for="ok-text2">No</label>
-			     <div id="ok-text-error" class="invalid-feedback ml-2"></div>
 			  </div>
 		  </div>
 		  <div class="form-group p-0 col-md-7 mb-4">
@@ -147,8 +158,7 @@
 			      <div class="input-group-append">
 		              	<span class="input-group-text dob-icon bg-primary border-primary"><i class="far fa-calendar-alt"></i></span>
 		              </div>
-			      <div id="dob-error" class="invalid-feedback"></div>
-		      	</div>
+			</div>
 		  </div>
 		  <div class="form-group col-md-7 mb-4 p-0">
 		      <label for="gender">Gender</label>
@@ -157,7 +167,6 @@
 		        <option value="male">Male</option>
 		        <option value="female">Female</option>
 		      </select>
-		      <div id="gender-error" class="invalid-feedback"></div>
 		  </div>
 		  <div class="form-group col-md-12 mb-3 mx-auto text-center">
 			<button class="btn btn-success btn-lg btn-fxw mt-4" type="submit"><i class="fas fa-plus"></i> Add Client</button>
@@ -198,6 +207,7 @@
 	  		    // Fetch all the forms fields we want to apply custom Bootstrap validation styles to
 			    
 			    var form_residential = document.getElementById('residential-form');
+			    var all_errors = document.getElementById('all-errors');
 			    
 			    var firstname = document.getElementById('firstname');
 			    var f_error = document.getElementById('firstname-error');
@@ -233,62 +243,84 @@
 			     	// validation for residential form fields
 			        $('#residential-form').on('submit',function(e){
 			        	if(firstname.validity.valueMissing) {
-			           		f_error.innerHTML = "Field should not be blank.";
+			           		f_error.innerHTML = "First name field is required.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(!firstname.validity.valueMissing){
+			           		f_error.innerHTML = "";
 			           	}
 			           	
 			           	if(firstname.validity.tooShort) {
-			           		f_error.innerHTML = "Fill in at least 3 characters.";
+			           		f_error.innerHTML = "First name: Fill in at least 3 characters.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(lastname.validity.valueMissing) {
-			           		l_error.innerHTML = "Field should not be blank.";
+			           		l_error.innerHTML = "Last name field is required.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(!lastname.validity.valueMissing){
+			           		l_error.innerHTML = "";
 			           	}
 			           	
 			           	if(lastname.validity.tooShort) {
-			           		l_error.innerHTML = "Fill in at least 3 characters.";
+			           		l_error.innerHTML = "Last name: Fill in at least 3 characters.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(email.validity.valueMissing) {
-			           		email_error.innerHTML = "Field should not be blank.";
+			           		email_error.innerHTML = "Email field is required.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(!email.validity.valueMissing){
+			           		email_error.innerHTML = "";
 			           	}
 			           	
 			           	if(email.validity.typeMismatch || email.validity.tooShort) {
 			           		email_error.innerHTML = "Fill in valid E-mail Id.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
 			           	}
 			           	
 			           	if(dob.validity.valueMissing) {
-			           		dob_error.innerHTML = "Please select date of birth.";
+			           		dob_error.innerHTML = "Please select Date of Birth.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(!dob.validity.valueMissing){
+			           		dob_error.innerHTML = "";
 			           	}
 			           	
 			           	if(gender.validity.valueMissing) {
-			           		gender_error.innerHTML = "Please select client gender.";
+			           		gender_error.innerHTML = "Please select client Gender.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(!gender.validity.valueMissing){
+			           		gender_error.innerHTML = "";
 			           	}
 			           	
 			           	if(phonenumber.validity.valueMissing) {
-			           		pn_error.innerHTML = "Field should not be blank.";
+			           		pn_error.innerHTML = "Phone number field is required.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(!phonenumber.validity.valueMissing){
+			           		pn_error.innerHTML = "";
 			           	}
 			           	
 			           	if(phonenumber.validity.tooShort) {
 			           		pn_error.innerHTML = "Fill in valid 10 digits phone number.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
 			           	}
 			           	
@@ -297,18 +329,23 @@
 			           		pn_error.innerHTML = "Fill in valid 10 digits phone number.";
 					        pn_error.style.display = "block";
 					        form_residential.classList.add('was-validated');
-					        e.preventDefault();
+					        all_errors.classList.add('error-block');
+			           		e.preventDefault();
 			           	}
 			           	
 			           	if(mobilenumber.validity.valueMissing) {
-			           		mobile_error.innerHTML = "Field should not be blank.";
+			           		mobile_error.innerHTML = "Mobile number field is required.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(!mobilenumber.validity.valueMissing){
+			           		mobile_error.innerHTML = "";
 			           	}
 			           	
 			           	if(mobilenumber.validity.tooShort) {
 			           		mobile_error.innerHTML = "Fill in valid 10 digits mobile number.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
 			           	}
 			           	
@@ -321,20 +358,27 @@
 			           			mobile_error.innerHTML = "Fill in valid 10 digits mobile number.";
 					        	mobile_error.style.display = "block";
 					        	form_residential.classList.add('was-validated');
-					        	e.preventDefault();
+					        	all_errors.classList.add('error-block');
+			           			e.preventDefault();
 					        }
 			           	}
 			           	
 			           	if(!ok_email.validity.valid) {
-			           		ok_email_error.innerHTML = "Please select option.";
+			           		ok_email_error.innerHTML = "Ok to email: Please select option.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(ok_email.validity.valid){
+			           		ok_email_error.innerHTML = "";
 			           	}
 			           	
 			           	if(!ok_text.validity.valid) {
-			           		ok_text_error.innerHTML = "Please select option.";
+			           		ok_text_error.innerHTML = "Ok to text: Please select option.";
 			           		form_residential.classList.add('was-validated');
+			           		all_errors.classList.add('error-block');
 			           		e.preventDefault();
+			           	}else if(ok_text.validity.valid){
+			           		ok_text_error.innerHTML = "";
 			           	}
 			        });
 			   
