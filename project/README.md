@@ -1,0 +1,1 @@
+Here is where you place all your custom project pages for your particular fork. Do not delete this file in your current fork. The key idea is that your project pages will be powered by the code found in the in-thought theme.
