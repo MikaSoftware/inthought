@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Over55 Add Residential Job</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="Over 55 (London) inc." content="">
+    <link rel="icon" href="favicon.ico">
+    <!-- CSS Library -->
+    <link href="../html/css/base.css" rel="stylesheet">
+    <link href='../html/css/fullcalendar.min.css' rel='stylesheet'/>
+    <link href='../html/css/fullcalendar.print.min.css' rel='stylesheet' media='print'/>
+    <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Project specific css -->
+    <link href="assets/css/custom.css" rel="stylesheet">
+</head>
+<body>
+<header class="navbar navbar-dark fixed-top bg-dark justify-content-between">
+    <a class="navbar-brand" href="#">Over55</a>
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+        <i class="fa fa-bars"></i>
+    </button>
+</header>
+<div class="container-fluid">
+    <div class="d-flex align-items-stretch">
+        <nav id="sidebar">
+            <p class="text-center text-light mt-3 mb-2">Hi, Rodolfo</p>
+            <hr class="nav-divider">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="dashboard/"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tasks/"><i class="fa fa-list-ol"></i> Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jobs/"><i class="fa fa-wrench"></i> Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reports/"><i class="fa fa-chart-bar"></i> Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="clients/"><i class="fa fa-user-circle"></i> Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="members/"><i class="fas fa-user"></i> Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team/"><i class="fa fa-users"></i> Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="partners/"><i class="fa fa-handshake"></i> Partners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resources/"><i class="fas fa-file-alt"></i> Resources</a>
+                </li>
+            </ul>
+            <hr class="nav-divider">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="settings/"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile/"><i class="fas fa-address-card"></i> Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help/"><i class="fas fa-question-circle"></i> Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main" role="main">
+            <div class="row">
+                <div class="col-sm-10 py-4 m-2 mx-auto">
+                    <div id='calendar'></div>
+                </div>
+            </div>
+            <a id="return-to-top" href="#" class="btn-primary btn-lg back-to-top" role="button" title="Back to top"><i
+                    class="fas fa-angle-up fa-2x"></i></a>
+        </main>
+    </div>
+</div>
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+<!-- Custom Scroller Js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../html/js/base.js"></script>
+<script src='../html/js/moment.min.js'></script>
+<script src='../html/js/fullcalendar.min.js'></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Project specific js -->
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('#calendar').fullCalendar({
+            themeSystem: 'bootstrap4',
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay,listMonth'
+            },
+            defaultDate: '2018-03-12',
+            windowResize: true,
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2018-03-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2018-03-07',
+                    end: '2018-03-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2018-03-09T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2018-03-16T16:00:00'
+                },
+                {
+                    title: 'Conference',
+                    start: '2018-03-11',
+                    end: '2018-03-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2018-03-12T10:30:00',
+                    end: '2018-03-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2018-03-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2018-03-12T14:30:00'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2018-03-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2018-03-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2018-03-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2018-03-28'
+                }
+            ]
+        });
+
+    });
+</script>
+</body>
+</html>

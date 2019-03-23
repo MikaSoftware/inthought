@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Over55 Add Residential Client</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="Over 55 (London) inc." content="">
+    <link rel="icon" href="../favicon.ico">
+    <!-- CSS Library -->
+    <link href="../../html/css/base.css" rel="stylesheet" type="text/css">
+    <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Project specific css -->
+    <link href="../assets/css/custom.css" rel="stylesheet">
+</head>
+<body>
+<header class="navbar navbar-dark fixed-top bg-dark justify-content-between">
+    <a class="navbar-brand" href="#">Over55</a>
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+        <i class="fa fa-bars"></i>
+    </button>
+</header>
+<div class="container-fluid">
+    <div class="d-flex align-items-stretch">
+        <nav id="sidebar">
+            <p class="text-center text-light mt-3 mb-2">Hi, Rodolfo</p>
+            <hr class="nav-divider">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/dashboard/"><i class="fas fa-tachometer-alt"></i>
+                        Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/tasks/"><i class="fa fa-list-ol"></i> Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/jobs/"><i class="fa fa-wrench"></i> Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/reports/"><i class="fa fa-chart-bar"></i> Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="http://inthought.pw/clients/"><i class="fa fa-user-circle"></i>
+                        Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/members/"><i class="fas fa-user"></i> Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/team/"><i class="fa fa-users"></i> Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/partners/"><i class="fa fa-handshake"></i>
+                        Partners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/resources/"><i class="fas fa-file-alt"></i> Resources</a>
+                </li>
+            </ul>
+            <hr class="nav-divider">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/settings/"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/profile/"><i class="fas fa-address-card"></i> Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/help/"><i class="fas fa-question-circle"></i> Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main" role="main">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><span class="text-muted">You are here:</span> <a href="index.html">Clients</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Add Client</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-sm-3 p-3 mb-2">
+                    <a class="btn btn-primary btn-lg" href="index.html" role="button"><i class="fas fa-arrow-left"></i>
+                        Back to Clients Home</a>
+                </div>
+            </div>
+            <h1>Add Client</h1>
+
+            <div class="col-sm-6 mx-auto mt-2">
+                <!-- Commercial form -->
+                <div class="col-sm-12" id="commercial-form" aria-labelledby="commercial">
+                    <h3 class="pt-4 pb-2 text-center">Residential Address</h3>
+                    <form id="address-form" method="post" class="needs-validation" action="" novalidate>
+                        <p class="border-bottom mb-3 pb-1 text-secondary">Client Address</p>
+                        <div class="form-row">
+                            <div class="form-group col-md-4 mb-4">
+                                <label for="street_no">Street No.</label>
+                                <input type="text" class="form-control form-control-lg border border-primary"
+                                       id="street_no" name="street_no" placeholder="Street no." required>
+                                <div id="street-error" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group col-md-8 mb-4">
+                                <label for="streetname">Street name</label>
+                                <input type="text" class="form-control form-control-lg border border-primary"
+                                       id="streetname" name="streetname" placeholder="Street name" minlength="3"
+                                       required>
+                                <div id="streetname-error" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group col-md-12 mb-4">
+                                <label for="neighbourhood">Neighbourhood (optional)</label>
+                                <input type="text" class="form-control form-control-lg border border-primary"
+                                       id="neighbourhood" name="neighbourhood" placeholder="Neighbourhood"
+                                       minlength="3">
+                                <div id="neighbourhood-error" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group col-md-5 mb-4">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control form-control-lg border border-primary" id="city"
+                                       name="city" placeholder="City" minlength="3" required>
+                                <div id="city-error" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group col-md-7 mb-4">
+                                <label for="province">State/Province</label>
+                                <select class="custom-select form-control-lg border-primary" id="province"
+                                        name="province" required>
+                                </select>
+                                <div id="province-error" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group col-md-5 mb-4">
+                                <label for="postal-code">Postal Code</label>
+                                <input type="text" class="form-control form-control-lg border border-primary"
+                                       id="postal-code" name="postal-code" placeholder="Postal Code" minlength="3"
+                                       required>
+                                <div id="postal-code-error" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group col-md-7 mb-4">
+                                <label for="country">Country</label>
+                                <select class="custom-select form-control-lg border-primary" id="country" name="country"
+                                        required>
+                                </select>
+                                <div id="country-error" class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12 mb-3 p-0 mx-auto text-center">
+                            <button class="btn btn-success btn-lg mt-4 float-right pl-4 pr-4" type="submit">Next <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <button class="btn btn-orange btn-lg mt-4 float-left pl-4 pr-4" type="button"><i
+                                    class="fas fa-arrow-left"></i> Back
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i
+                    class="fas fa-angle-up fa-2x"></i></a>
+        </main>
+    </div>
+</div>
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+<!-- Custom Scroller Js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../../html/js/base.js"></script>
+<!-- Project specific js -->
+<script src="../assets/js/custom.js"></script>
+<script>
+    $(function () {
+        $('#country').change(function () {
+            loadState($(this).find(':selected').val())
+        });
+        loadState('CA');
+    });
+
+    let c_dropdown = $('#country');
+    c_dropdown.empty();
+    c_dropdown.append('<option selected="true" disabled>Choose Country</option>');
+    c_dropdown.prop('selectedIndex', 1);
+
+    const state = '../assets/js/provinces.json';
+    const country = '../assets/js/countries.json';
+
+    // Populate dropdown with list of countries
+    $.getJSON(country, function (data) {
+        $.each(data, function (key, entry) {
+            c_dropdown.append($('<option></option>').attr('value', entry.code).text(entry.country));
+        })
+    });
+
+    function loadState(countryId) {
+        let p_dropdown = $('#province');
+        p_dropdown.empty();
+        p_dropdown.append('<option selected="true" disabled>Choose State/Province</option>');
+        p_dropdown.prop('selectedIndex', 0);
+
+        // Populate dropdown with list of provinces
+        $.getJSON(state, function (data) {
+            $.each(data, function (key, entry) {
+                if (entry.country == countryId) {
+                    p_dropdown.append($('<option></option>').attr('value', entry.short).text(entry.name));
+                }
+            })
+        });
+        if (countryId == 'CA') {
+            p_dropdown.prop('selectedIndex', 1);
+        }
+    }
+
+    // Fields Validation
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms fields we want to apply custom Bootstrap validation styles to
+
+            var address_form = document.getElementById('address-form');
+
+            var street_no = document.getElementById('street_no');
+            var streetnumber_error = document.getElementById('street-error');
+
+            var streetname = document.getElementById('streetname');
+            var streetname_error = document.getElementById('streetname-error');
+
+            var neighbourhood = document.getElementById('neighbourhood');
+            var neighbourhood_error = document.getElementById('neighbourhood-error');
+
+            var city = document.getElementById('city');
+            var city_error = document.getElementById('city-error');
+
+            var province = document.getElementById('province');
+            var province_error = document.getElementById('province-error');
+
+            var postal_code = document.getElementById('postal-code');
+            var postal_code_error = document.getElementById('postal-code-error');
+
+            var country = document.getElementById('country');
+            var country_error = document.getElementById('country-error');
+
+            // Loop over them and prevent submission
+            $(function () {
+                // validation for commercial form fields
+                $('#address-form').on('submit', function (e) {
+                    if (street_no.validity.valueMissing) {
+                        streetnumber_error.innerHTML = "Field should not be blank.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (streetname.validity.valueMissing) {
+                        streetname_error.innerHTML = "Field should not be blank.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (streetname.validity.tooShort) {
+                        streetname_error.innerHTML = "Fill in at least 3 characters.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (city.validity.valueMissing) {
+                        city_error.innerHTML = "Field should not be blank.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (city.validity.tooShort) {
+                        city_error.innerHTML = "Fill in at least 3 characters.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (neighbourhood.validity.tooShort) {
+                        neighbourhood_error.innerHTML = "Fill in at least 3 characters.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (postal_code.validity.valueMissing) {
+                        postal_code_error.innerHTML = "Field should not be blank.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (postal_code.validity.tooShort) {
+                        postal_code_error.innerHTML = "Fill in at least 3 characters.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (province.validity.valueMissing) {
+                        province_error.innerHTML = "Please select province/state";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (country.validity.valueMissing) {
+                        country_error.innerHTML = "Please select country.";
+                        address_form.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                });
+            });
+
+        }, false);
+    })();
+</script>
+</body>
+</html>

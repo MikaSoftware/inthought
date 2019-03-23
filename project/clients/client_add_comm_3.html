@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Over55 Add Commercial Client</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="Over 55 (London) inc." content="">
+    <link rel="icon" href="../favicon.ico">
+    <!-- CSS Library -->
+    <link href="../../html/css/base.css" rel="stylesheet" type="text/css">
+    <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Project specific css -->
+    <link href="../assets/css/custom.css" rel="stylesheet">
+</head>
+<body>
+<header class="navbar navbar-dark fixed-top bg-dark justify-content-between">
+    <a class="navbar-brand" href="#">Over55</a>
+    <button class="navbar-toggler" type="button" id="sidebarCollapse">
+        <i class="fa fa-bars"></i>
+    </button>
+</header>
+<div class="container-fluid">
+    <div class="d-flex align-items-stretch">
+        <nav id="sidebar">
+            <p class="text-center text-light mt-3 mb-2">Hi, Rodolfo</p>
+            <hr class="nav-divider">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/dashboard/"><i class="fas fa-tachometer-alt"></i>
+                        Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/tasks/"><i class="fa fa-list-ol"></i> Tasks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/jobs/"><i class="fa fa-wrench"></i> Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/reports/"><i class="fa fa-chart-bar"></i> Reports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="http://inthought.pw/clients/"><i class="fa fa-user-circle"></i>
+                        Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/members/"><i class="fas fa-user"></i> Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/team/"><i class="fa fa-users"></i> Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/partners/"><i class="fa fa-handshake"></i>
+                        Partners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/resources/"><i class="fas fa-file-alt"></i> Resources</a>
+                </li>
+            </ul>
+            <hr class="nav-divider">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/settings/"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/profile/"><i class="fas fa-address-card"></i> Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://inthought.pw/help/"><i class="fas fa-question-circle"></i> Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </nav>
+        <main id="main" role="main">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><span class="text-muted">You are here:</span> <a href="index.html">Clients</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Add Client</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-sm-3 p-3 mb-2">
+                    <a class="btn btn-primary btn-lg" href="index.html" role="button"><i class="fas fa-arrow-left"></i>
+                        Back to Clients Home</a>
+                </div>
+            </div>
+            <h1>Add Client</h1>
+            <div class="col-sm-6 mx-auto mt-2">
+                <!-- Screen 3 form -->
+                <div class="col-sm-12">
+                    <h3 class="pt-4 pb-2 text-center">Add Skills</h3>
+                    <form id="skills-form" method="get" class="needs-validation" action="" novalidate>
+                        <div class="form-group mb-3">
+                            <label for="skills">Add skills seperated by a comma</label>
+                            <input type="text" class="form-control form-control-lg border-primary" id="skills"
+                                   placeholder="Add skill.." minlength="3" name="skills" data-role="tagsinput" required>
+                            <small class="form-text text-muted">Only 50 skills are allowed.</small>
+                            <div id="skills-error" class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group mb-3 mx-auto text-center p-0">
+                            <button class="btn btn-success btn-lg mt-4 float-right pl-4 pr-4" type="submit">Next <i
+                                    class="fas fa-arrow-right"></i></button>
+                            <button class="btn btn-orange btn-lg mt-4 float-left pl-4 pr-4" type="button"><i
+                                    class="fas fa-arrow-left"></i> Back
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <a id="return-to-top" href="#" class="btn-info btn-lg back-to-top" role="button" title="Back to top"><i
+                    class="fas fa-angle-up fa-2x"></i></a>
+        </main>
+    </div>
+</div>
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+<!-- Custom Scroller Js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="../../html/js/base.js"></script>
+<script src="../../html/js/bootstrap-tagsinput.js"></script>
+<script src="../../html/js/typeahead.bundle.js"></script>
+<!-- Project specific js -->
+<script src="../assets/js/custom.js"></script>
+<script>
+    // Fields Validation
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms fields we want to apply custom Bootstrap validation styles to
+
+            var form_skills = document.getElementById('skills-form');
+            var skills = document.getElementById('skills');
+            var skills_error = document.getElementById('skills-error');
+
+            // Loop over them and prevent submission
+            $(function () {
+                // validation for commercial form fields
+                $('#skills-form').on('submit', function (e) {
+                    if (skills.validity.tooShort) {
+                        skills_error.innerHTML = "Fill in at least 3 characters.";
+                        form_skills.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                    if (skills.validity.valueMissing) {
+                        skills_error.innerHTML = "Field should not be blank.";
+                        form_skills.classList.add('was-validated');
+                        skills_error.style.display = "block";
+                        e.preventDefault();
+                    }
+                    if ($('.bootstrap-tagsinput').hasClass("bootstrap-tagsinput-max")) {
+                        skills_error.innerHTML = "Only 50 Skills are allowed";
+                        form_skills.classList.add('was-validated');
+                        e.preventDefault();
+                    }
+                });
+                $('#skills-form').on('keyup keypress', function (e) {
+                    var keyCode = e.keyCode || e.which;
+                    if (keyCode === 13) {
+                        e.preventDefault();
+                        return false;
+                    }
+                });
+                $(".bootstrap-tagsinput input").on('input', function () {
+                    if ($('.bootstrap-tagsinput').hasClass("bootstrap-tagsinput-max")) {
+                        skills_error.innerHTML = "Reached maximum Limit.";
+                        form_skills.classList.add('was-validated');
+                        skills_error.style.display = "block";
+                    } else {
+                        skills_error.style.display = "none";
+                    }
+                });
+            });
+
+        }, false);
+    })();
+</script>
+<script>
+    var skills = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: {
+            url: '../assets/js/json-data/skills.json',
+            filter: function (list) {
+                return $.map(list, function (skill) {
+                    return {name: skill};
+                });
+            }
+        }
+    });
+    skills.initialize();
+
+    $('input').tagsinput({
+        typeaheadjs: {
+            name: 'skills',
+            displayKey: 'name',
+            valueKey: 'name',
+            source: skills.ttAdapter()
+        },
+    });
+</script>
+</body>
+</html>
